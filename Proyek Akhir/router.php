@@ -1,6 +1,6 @@
 <?php
     $url = $_SERVER['REDIRECT_URL'];
-    $baseURL = '/Proyek Akhir';
+    $baseURL = '/WebDoctor/Proyek Akhir';
     if($_SERVER["REQUEST_METHOD"]=="GET"){
         switch ($url) {
             case $baseURL."/signup":
