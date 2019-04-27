@@ -24,7 +24,7 @@
                 require_once "Controller/loginController.php";
                 $sign = new LoginController();
                 echo $sign->signUp();
-                header('');
+                header('index.php');
                 break;
             case $baseURL."/signin":
                 require_once "Controller/loginController.php";
