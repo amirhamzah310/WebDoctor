@@ -20,8 +20,11 @@
     }
     else if($_SERVER["REQUEST_METHOD"]=="POST"){
         switch ($url) {
-            case $baseURL."/home":
-                require_once "Controller/";
+            case $baseURL."/addUser":
+                require_once "Controller/loginController.php";
+                $sign = new LoginController();
+                echo $sign->signUp();
+                header('');
                 break;
             case $baseURL."/signin":
                 require_once "Controller/loginController.php";
