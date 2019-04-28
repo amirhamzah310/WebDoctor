@@ -4,7 +4,58 @@ var hasilNama;
 var hasilAlamat;
 var hasilEmail;
 var hasilPassword;
-var userExist = [];
+var tahun;
+var bulan;
+var tanggal;
+var kota;
+
+function cekTahun() {
+    tahun = document.getElementById('selectYear').value;
+    if (tahun != "Tahun") {
+        document.getElementById('valttl').innerHTML = '';
+        tahun = true;
+    } else {
+        document.getElementById('valttl').style.color = 'red';
+        document.getElementById('valttl').innerHTML = 'Harus diisi!';
+        tahun = false;
+    }
+}
+
+function cekBulan() {
+    bulan = document.getElementById('selectMonth').value;
+    if (bulan != "Bulan") {
+        document.getElementById('valttl').innerHTML = '';
+        bulan = true;
+    } else {
+        document.getElementById('valttl').style.color = 'red';
+        document.getElementById('valttl').innerHTML = 'Harus diisi!';
+        bulan = false;
+    }
+}
+
+function cekTanggal() {
+    tanggal = document.getElementById('selectDate').value;
+    if (tanggal != "Tanggal") {
+        document.getElementById('valttl').innerHTML = '';
+        tanggal = true;
+    } else {
+        document.getElementById('valttl').style.color = 'red';
+        document.getElementById('valttl').innerHTML = 'Harus diisi!';
+        tanggal = false;
+    }
+}
+
+function cekKota() {
+    kota = document.getElementById('selectKota').value;
+    if (kota != "Pilih Kota") {
+        document.getElementById('valttl').innerHTML = '';
+        kota = true;
+    } else {
+        document.getElementById('valkota').style.color = 'red';
+        document.getElementById('valkota').innerHTML = 'Harus diisi!';
+        kota = false;
+    }
+}
 
 function checkPass() {
     if (document.getElementById('pass').value.length == 0) {
@@ -38,10 +89,26 @@ function checkRePass() {
     }
 }
 
+function checkuser() {
+    if (document.getElementById('username').value.length > 12) {
+        document.getElementById('userlength').style.color = 'red';
+        document.getElementById('userlength').innerHTML = 'username terlalu panjang';
+        return false;
+    } else {
+        document.getElementById('userlength').innerHTML = '';
+        return true;
+    }
+}
+
 function check() {
     x = document.querySelectorAll("#formsignup input");
     validate();
-    if (hasilNama && hasilAlamat && hasilEmail && checkPass() && checkRePass() && hasilPassword) {
+    cekTahun();
+    cekBulan();
+    cekTanggal();
+    cekKota();
+    var y = document.getElementById('userauth');
+    if (hasilNama && hasilAlamat && hasilEmail && tahun && bulan && tanggal && kota && checkuser() && checkPass() && checkRePass() && hasilPassword && y.innerHTML == "username tersedia") {
         return true;
     }
     return false;
