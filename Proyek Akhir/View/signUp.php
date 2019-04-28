@@ -52,7 +52,7 @@
                 <?php
                     foreach ($kota as $key => $value) {
                         echo "<option>";
-                        echo "$value";
+                        echo "$value[0]";
                         echo "</option>";
                     }
                 ?>
@@ -60,7 +60,8 @@
         </div>
         <div id="lblUser">
             <label for="username" class="users">Username</label><br>
-            <input type="text" name="iUser" class="username" placeholder="Masukkan username Anda">
+            <input type="text" name="iUser" class="username" placeholder="Tidak boleh lebih dari 12 karakter">
+            <span id="userauth"></span>
         </div>
         <div id="lblEmail">
             <label for="email" class="e_mail">Email</label><br>

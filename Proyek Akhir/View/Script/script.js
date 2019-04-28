@@ -4,6 +4,7 @@ var hasilNama;
 var hasilAlamat;
 var hasilEmail;
 var hasilPassword;
+var userExist = [];
 
 function checkPass() {
     if (document.getElementById('pass').value.length == 0) {

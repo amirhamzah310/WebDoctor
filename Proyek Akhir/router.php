@@ -4,8 +4,8 @@
     if($_SERVER["REQUEST_METHOD"]=="GET"){
         switch ($url) {
             case $baseURL."/signup":
-                require_once "Controller/loginController.php";
-                $log = new LoginController();
+                require_once "Controller/signUpController.php";
+                $log = new SignUpController();
                 echo $log->sign();
                 break;
             case $baseURL."/index.php":
@@ -21,10 +21,10 @@
     else if($_SERVER["REQUEST_METHOD"]=="POST"){
         switch ($url) {
             case $baseURL."/addUser":
-                require_once "Controller/loginController.php";
-                $sign = new LoginController();
+                require_once "Controller/signUpController.php";
+                $sign = new SignUpController();
                 echo $sign->signUp();
-                header('index.php');
+                header('Location: index.php');
                 break;
             case $baseURL."/signin":
                 require_once "Controller/loginController.php";

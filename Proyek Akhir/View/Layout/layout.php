@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="View/Style/style.css">
     <script src="View/Script/script.js" defer></script>
     <script src="View/Script/SignUp.js" defer></script>
+    <script src="View/Script/jquery.js" defer></script>
 </head>
 <body>
     <?=$content?>
