@@ -5,7 +5,7 @@
     class LoginController{
         protected $db;
         public function __construct(){
-            $this->db = new mysqlDB("localhost","root","","library");
+            $this->db = new mysqlDB("localhost","root","","webdoctor");
         }
 
         public function start(){
@@ -15,7 +15,7 @@
         public function auth(){
             $usr=$_POST['iUsr'];
             $pss=$_POST['iPss'];
-            $query="SELECT `peran` FROM Member WHERE ";
+            $query="SELECT `peran` FROM `member` WHERE ";
             if(isset($usr)&&$usr!=""){
                 $usr=$this->db->escapeString($usr);
                 $query.="(`username`='$usr' OR `email`='$usr') AND ";
@@ -27,6 +27,7 @@
             }
             print_r($query);
             $res = $this->db->executeSelectQuery($query);
+            print_r($res);
             if($res==0){//admin
                 header('');
             }
@@ -49,38 +50,42 @@
 
         public function signUp(){
             $nama=$_POST['inputNama'];
-            $ttl=$_POST['']; //gatau gimana cara ambil value dari dropdown pake method post
+            // $ttl=$_POST['']; //gatau gimana cara ambil value dari dropdown pake method post
             $alamat=$_POST['inputAlamat'];
             $kota=$_POST['kota'];
             $user=$_POST['iUser'];
             $email=$_POST['inputEmail'];
             $password=$_POST['inputPass'];
-            $query="INSERT INTO Member VALUES(";
-            if(isset($nama)&&$nama!=""){
-                $nama=$this->db->excapeString($nama);
-                $query.="'$nama',";
-            }
-            if(isset($alamat)&&$alamat!=""){
-                $alamat=$this->db->excapeString($alamat);
-                $query.="'$alamat',";
-            }
-            if(isset($kota)&&$kota!=""){
-                $kota=$this->db->excapeString($kota);
-                $query.="'$kota',";
-            }
+            $query="INSERT INTO `member` VALUES(";
             if(isset($user)&&$user!=""){
-                $user=$this->db->excapeString($user);
+                $user=$this->db->escapeString($user);
                 $query.="'$user',";
             }
+            if(isset($nama)&&$nama!=""){
+                $nama=$this->db->escapeString($nama);
+                $query.="'$nama',";
+            }
+            //tanggal lahir
+            $query.="'19990105',";
+            if(isset($kota)&&$kota!=""){
+                $kota=$this->db->escapeString($kota);
+                $query.="'$kota',";
+            }
+            if(isset($alamat)&&$alamat!=""){
+                $alamat=$this->db->escapeString($alamat);
+                $query.="'$alamat',";
+            }
             if(isset($email)&&$email!=""){
-                $email=$this->db->excapeString($email);
+                $email=$this->db->escapeString($email);
                 $query.="'$email',";
             }
             if(isset($password)&&$password!=""){
-                $password=$this->db->excapeString($password);
-                $query.="'$password')";
+                $password=$this->db->escapeString($password);
+                $query.="'$password',";
             }
-            $this->db->executeNonSelectQuery();
+            $query.="0)";
+            // print_r($query);
+            $this->db->executeNonSelectQuery($query);
         }
     }
 ?>
