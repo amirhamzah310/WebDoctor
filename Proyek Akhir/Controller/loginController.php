@@ -25,18 +25,42 @@
                 $hashedPassword=md5($pss);
                 $query.="`password`='$hashedPassword'";
             }
-            print_r($query);
             $res = $this->db->executeSelectQuery($query);
-            if($res[0][0]==1){//admin
-                header('');
-                print_r("masuk");
-            }
-            else if($res[0][0]==0){ //user
-                print_r("user");
+            if(count($res)!=0){
+                if($res[0][0]==1){//admin
+                    header('');
+                    print_r("masuk");
+                }
+                else if($res[0][0]==0){ //user
+                    session_start();
+                    $_SESSION['userlogin'] = $usr;
+                    session_write_close();
+                    header('Location: homepage');
+                }
             }
             else{
-                print_r("tidak terdaftar");
+                return View::createView('wronglogin.php',[]);
             }
+        }
+
+        public function forgot(){
+            return View::createView('forgot.php',[]);
+        }
+
+        public function updatePass(){
+            $usr=$_POST['iUsr'];
+            $pss=$_POST['inputPass'];
+            $query = "UPDATE `member` SET ";
+            if(isset($pss)&&$pss!=""){
+                $pss=$this->db->escapeString($pss);
+                $hashedPassword=md5($pss);
+                $query.="`password`='$hashedPassword' WHERE `username`=";
+            }
+            if(isset($usr)&&$usr!=""){
+                $usr=$this->db->escapeString($usr);
+                $query.="'$usr' OR `email`='$usr'";
+            }
+            $this->db->executeNonSelectQuery($query);
         }
     }
 ?>

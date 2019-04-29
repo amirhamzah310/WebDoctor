@@ -21,6 +21,8 @@
             </div>
         </form>
         <p>
+            Lupa Password?
+            <a href="forgot">Klik disini</a><br><br>
             Belum punya akun?
             <a href="signup">Sign Up</a>
         </p>

@@ -162,6 +162,7 @@ h1 {
     text-align: center;
 }
 
+#confirmpss,
 #usr,
 #pss,
 #remember {
@@ -277,6 +278,18 @@ select#selectKota {
     position: absolute;
     margin-left: -180px;
     margin-top: 5px;
+}
+
+#wronginput {
+    text-align: center;
+    color: red;
+}
+
+#harus {
+    position: absolute;
+    margin-left: 10px;
+    margin-top: 5px;
+    color: red;
 }
 
 #valttl,

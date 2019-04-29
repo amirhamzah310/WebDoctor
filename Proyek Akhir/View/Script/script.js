@@ -122,3 +122,14 @@ function validate() {
     hasilEmail = val.validateEmail();
     hasilPassword = val.validatePassword();
 }
+
+function checkLengkap() {
+    var user = document.getElementById('username');
+    if (user.value.length != 0 && checkPass() && checkRePass()) {
+        return true;
+    } else {
+        var harus = document.getElementById('harus');
+        harus.innerHTML = 'username harus diisi!';
+        return false;
+    }
+}
