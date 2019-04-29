@@ -1,4 +1,9 @@
-<p>Halo, <?=$nama?>!</p>
+<div class="nav">
+    <h5>Halo, <?=$nama?>!</h5>
+</div>
+
+
+
 <a href="home">Home</a>
 <span id="pembatas">|</span>
 <a href="">Lihat Riwayat Penyakit</a>
@@ -10,7 +15,7 @@
     <?php
         foreach($res as $key => $value){
             echo "<option>";
-            echo "$value";
+            echo "$value[0]";
             echo "</option>";
         }
     ?>
