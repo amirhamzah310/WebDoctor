@@ -315,13 +315,20 @@ select#selectKota {
 }
 
 .nav {
+    position: fixed;
     height: 50px;
     width: 100%;
     background-color: lightblue;
 }
 
-h5 {
+#halonama {
     font-size: 20px;
-    color: black;
-    padding: 12px;
+    line-height: 45px;
+    display: inline;
+    padding: 15px;
+}
+
+.menu {
+    position: absolute;
+    right: 0;
 }

@@ -1,14 +1,15 @@
 <div class="nav">
-    <h5>Halo, <?=$nama?>!</h5>
+    <p id="halonama">Halo, <?=$nama?>!</p>
+    <div class="menu">
+        <a href="home">Home</a>
+        <span id="pembatas">|</span>
+        <a href="">Lihat Riwayat Penyakit</a>
+        <span id="pembatas">|</span>
+        <a href="index.php">Logout</a>
+    </div>
 </div>
 
 
-
-<a href="home">Home</a>
-<span id="pembatas">|</span>
-<a href="">Lihat Riwayat Penyakit</a>
-<span id="pembatas">|</span>
-<a href="index.php">Logout</a>
 <h1>Silahkan pilih keluhan</h1>
 <select name="dropdownPenyakit" id="pilihPenyakit">
     <option value="">- Pilih Keluhan -</option>
