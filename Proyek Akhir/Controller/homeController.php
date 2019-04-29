@@ -9,8 +9,12 @@
         }
 
         public function start(){
+            $query = "SELECT namaKategori FROM Kategori";
+            $res = $this->db->executeSelectQuery($query);
+            session_start();
             return View::createView('home.php',[
-                "nama"=> $_SESSION['userlogin']
+                "nama"=> $_SESSION['userlogin'],
+                "res"=> $res
             ]);
         }
     }
