@@ -421,3 +421,19 @@ option {
 #popup:target {
     visibility: visible;
 }
+
+/*pilihan menu pada halaman utama admin*/
+.pilihanMenu{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+.pilihanMenu a{
+    text-decoration: none;
+    padding: 15px;
+}
+
+.pilihanMenu a:hover{
+    color: white;
+}
