@@ -313,3 +313,15 @@ select#selectKota {
     border-radius: 25px;
     background-color: blue;
 }
+
+.nav {
+    height: 50px;
+    width: 100%;
+    background-color: lightblue;
+}
+
+h5 {
+    font-size: 20px;
+    color: black;
+    padding: 12px;
+}

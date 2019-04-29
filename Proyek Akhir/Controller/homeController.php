@@ -12,8 +12,10 @@
             $query = "SELECT namaKategori FROM Kategori";
             $res = $this->db->executeSelectQuery($query);
             session_start();
+            $nama = $_SESSION['userlogin'];
+            session_write_close();
             return View::createView('home.php',[
-                "nama"=> $_SESSION['userlogin'],
+                "nama"=> $nama,
                 "res"=> $res
             ]);
         }

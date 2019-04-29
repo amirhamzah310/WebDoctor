@@ -18,7 +18,7 @@
                 $log = new SignUpController();
                 echo $log->sign();
                 break;
-            case $baseURL."/index.php":
+            case $baseURL."/login":
                 require_once "Controller/loginController.php";
                 $log = new LoginController();
                 echo $log->start();
