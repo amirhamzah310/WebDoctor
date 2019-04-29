@@ -28,6 +28,11 @@
                 $log = new LoginController();
                 echo $log->start();
                 break;
+            case $baseURL."/riwayat";
+                require_once "Controller/riwayatController.php";
+                $log = new RiwayatController();
+                echo $log->start();
+                break;
             default:
                 echo '404 not found';
                 break;
