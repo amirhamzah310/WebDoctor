@@ -9,10 +9,16 @@
         }
 
         public function show(){
+            // $kategori = $_GET['pilihPenyakit'];
             $query = "SELECT namaGejala FROM Gejala";
             $res = $this->db->executeSelectQuery($query);
-            return View::createView(gejala.php,[
-                "res"=$res;
+            session_start();
+            $nama = $_SESSION['userlogin'];
+            session_write_close();
+            return View::createView('gejala.php',[
+                // "kategori"=>$kategori,
+                "nama"=>$nama,
+                "res"=>$res
             ]);
         }
     }

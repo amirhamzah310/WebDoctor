@@ -7,6 +7,7 @@
                 require_once "Controller/gejalaController.php";
                 $gejala = new GejalaController();
                 echo $gejala->show();
+                break;
             case $baseURL."/homepage";
                 require_once "Controller/homeController.php";
                 $home = new HomeController();
