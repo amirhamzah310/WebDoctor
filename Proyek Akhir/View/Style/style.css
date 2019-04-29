@@ -160,6 +160,7 @@ body {
 
 h1 {
     text-align: center;
+    font-size: 35px;
 }
 
 #confirmpss,
@@ -239,6 +240,30 @@ p {
 #lblRePass {
     margin-top: 10px;
     text-align: center;
+}
+
+
+
+.content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 70px;
+}
+
+.pilih {
+    margin: auto;
+}
+
+select#pilihPenyakit {
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 500px;
+    box-shadow: 2px 2px 3px #666;
+    font-size: 12px;
+    padding: 4px 7px;
+    outline: 0;
 }
 
 select#selectYear,
@@ -328,7 +353,27 @@ select#selectKota {
     padding: 15px;
 }
 
-.menu {
+.menuKiri {
     position: absolute;
-    right: 0;
+    top: 0;
+    left: 0;
+}
+
+.menuKanan {
+    position: absolute;
+    top: 15px;
+    right: 10px;
+}
+
+.menuKanan a {
+    text-decoration: none;
+    padding: 15px;
+}
+
+.menuKanan a:hover {
+    color: white;
+}
+
+form input {
+    text-align: center;
 }
