@@ -160,7 +160,6 @@ body {
 
 h1 {
     text-align: center;
-    font-size: 35px;
 }
 
 #confirmpss,
@@ -237,22 +236,10 @@ p {
 #lblEmail,
 #lblPass,
 #lblKota,
-#lblRePass {
+#lblRePass,
+#pilih {
     margin-top: 10px;
     text-align: center;
-}
-
-
-
-.content {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    margin-top: 70px;
-}
-
-.pilih {
-    margin: auto;
 }
 
 select#pilihPenyakit {
@@ -262,7 +249,7 @@ select#pilihPenyakit {
     width: 500px;
     box-shadow: 2px 2px 3px #666;
     font-size: 12px;
-    padding: 4px 7px;
+    padding: 10px 7px;
     outline: 0;
 }
 
@@ -327,7 +314,8 @@ select#selectKota {
     margin-top: 5px;
 }
 
-#sign_in {
+#sign_in,
+#btnMulai {
     margin: auto;
     margin-top: 20px;
     display: block;
@@ -375,5 +363,13 @@ select#selectKota {
 }
 
 form input {
+    text-align: center;
+}
+
+.blok {
+    height: 50px;
+}
+
+option {
     text-align: center;
 }

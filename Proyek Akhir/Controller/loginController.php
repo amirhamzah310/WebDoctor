@@ -15,7 +15,7 @@
         public function auth(){
             $usr=$_POST['iUsr'];
             $pss=$_POST['iPss'];
-            $query="SELECT `peran` FROM `member` WHERE (`username`=";
+            $query="SELECT `peran`,`namaMember` FROM `member` WHERE (`username`=";
             if(isset($usr)&&$usr!=""){
                 $usr=$this->db->escapeString($usr);
                 $query.="'$usr' OR `email`='$usr') AND ";
@@ -33,7 +33,7 @@
                 }
                 else if($res[0][0]==0){ //user
                     session_start();
-                    $_SESSION['userlogin'] = $usr;
+                    $_SESSION['userlogin'] = $res[0][1];
                     session_write_close();
                     header('Location: homepage');
                 }

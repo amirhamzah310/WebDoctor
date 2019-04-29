@@ -3,6 +3,10 @@
     $baseURL = '/WebDoctor/Proyek Akhir';
     if($_SERVER["REQUEST_METHOD"]=="GET"){
         switch ($url) {
+            case $baseURL."/gejala";
+                require_once "Controller/gejalaController.php";
+                $gejala = new GejalaController();
+                echo $gejala->show();
             case $baseURL."/homepage";
                 require_once "Controller/homeController.php";
                 $home = new HomeController();

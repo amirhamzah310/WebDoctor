@@ -1,6 +1,19 @@
-<div class="content">
-    <h1>Silahkan pilih keluhan</h1>
-    <div class="pilih">
+<div class="nav">
+    <div class="menuKiri">
+        <p id="halonama">Halo, <?=$nama?>!</p>
+    </div>
+    <div class="menuKanan">
+        <a href="homepage">Home</a>
+        <span id="pembatas">|</span>
+        <a href="">Lihat Riwayat Penyakit</a>
+        <span id="pembatas">|</span>
+        <a href="index.php">Logout</a>
+    </div>
+</div>
+<div class="blok"></div>
+<div class="header">
+    <h1 class="judul">Silahkan pilih keluhan</h1>
+    <div id="pilih">
         <select name="dropdownPenyakit" id="pilihPenyakit">
             <option value="">- Pilih Keluhan -</option>
             <?php
@@ -12,21 +25,9 @@
             ?>
         </select>
     </div>
-    <div class="sumit">
-        <form action="" method="get">
+    <div id="sumit">
+        <form action="gejala" method="get">
             <input type="submit" id="btnMulai" value="Mulai">
         </form>
-    </div>
-</div>
-<div class="nav">
-    <div class="menuKiri">
-        <p id="halonama">Halo, <?=$nama?>!</p>
-    </div>
-    <div class="menuKanan">
-        <a href="homepage">Home</a>
-        <span id="pembatas">|</span>
-        <a href="">Lihat Riwayat Penyakit</a>
-        <span id="pembatas">|</span>
-        <a href="index.php">Logout</a>
     </div>
 </div>
