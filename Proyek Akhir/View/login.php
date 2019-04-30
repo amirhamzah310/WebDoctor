@@ -22,7 +22,7 @@
         </form>
         <p>
             Lupa Password?
-            <a href="forgot">Klik disini</a><br><br>
+            <a href="forgot">Klik di sini</a><br><br>
             Belum punya akun?
             <a href="signup">Sign Up</a>
         </p>

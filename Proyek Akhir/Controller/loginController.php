@@ -28,7 +28,7 @@
             $res = $this->db->executeSelectQuery($query);
             if(count($res)!=0){
                 if($res[0][0]==1){//admin
-                    header('');
+                    header('Location: admin');
                     print_r("masuk");
                 }
                 else if($res[0][0]==0){ //user
