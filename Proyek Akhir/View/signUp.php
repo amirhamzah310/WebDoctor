@@ -13,7 +13,7 @@
             <select name="year" id="selectYear">
                 <option>Tahun</option>
                 <?php
-                    for ($x=1990 ; $x <= 2019; $x++) { 
+                    for ($x=1990 ; $x <= 2018; $x++) { 
                         echo "<option>";
                         echo "$x";
                         echo "</option>";

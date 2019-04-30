@@ -10,7 +10,10 @@
         <a href="index.php">Logout</a>
     </div>
 </div>
-<h1 class="judul">Riwayat Penyakit<h1>
+<div class="blok"></div>
+<div class="header">
+    <h1 class="judul">Riwayat Penyakit<h1>
+</div>
 <table>
     <tr>
         <th>Tanggal</th>
