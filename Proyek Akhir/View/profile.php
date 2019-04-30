@@ -27,6 +27,7 @@
                 echo "<img src='View/Style/Images/no-profile.jpg' id='displayPicture' onclick='trigger()'>";
             }
         ?>
+        File yang diupload maksimum berukuran 30 x 30
         <input type="file" name="upfile" id="upfile" onchange="display(this)"><br>
         <input type="submit" value="Simpan">
     </form>

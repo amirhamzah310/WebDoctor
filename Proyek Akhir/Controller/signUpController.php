@@ -31,7 +31,7 @@
             $user=$_POST['iUser'];
             $email=$_POST['inputEmail'];
             $password=$_POST['inputPass'];
-            $query="INSERT INTO `member` VALUES(";
+            $query="INSERT INTO `member`(`username`,`namaMember`,`tglLahir`,`kota`,`alamat`,`email`,`password`,`peran`) VALUES(";
             if(isset($user)&&$user!=""){
                 $user=$this->db->escapeString($user);
                 $query.="'$user',";
