@@ -20,7 +20,7 @@
                     echo '<input type="checkbox" name='.$value[0].'>'.$value[0];
                 }
             ?>
-            <a href="#popup"><button type="submit" data-target="popup" id="btnMulai">Mulai</button></a>
+            <a href="#popup"><button id="btnMulai">Mulai</button></a>
         </form>
     </div>
 </div>
