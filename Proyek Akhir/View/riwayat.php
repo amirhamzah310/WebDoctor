@@ -10,6 +10,7 @@
         <a href="index.php">Logout</a>
     </div>
 </div>
+<div class="blok"></div>
 <h1 class="judul">Riwayat Penyakit<h1>
 <table>
     <tr>
