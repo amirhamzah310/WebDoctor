@@ -132,8 +132,9 @@ table {
 
 .container {
     width: 800px;
-    background-color: whitesmoke;
+    background-color: rgb(255, 254, 254);
     margin: auto;
+    padding:50px;
 }
 
 .header {
@@ -141,21 +142,23 @@ table {
 }
 
 .header .judul {
-    font-size: 35px;
+    padding:10px;
+    margin-top:-50px;
+    font-size: 35px; 
     font-weight: bold;
 }
 
 .atas {
     background-image: url('Images/logo.png');
     background-position: center;
-    height: 200px;
+    height: 250px;
     padding: 25px;
     background-repeat: no-repeat;
 }
 
 body {
-    background-color: #eaeaea;
-    color: #666;
+    background-color: #2df837;
+    color: rgb(10, 10, 10);
 }
 
 h1 {
@@ -167,6 +170,10 @@ h1 {
 #pss,
 #remember {
     margin-top: 10px;
+    text-align: center;
+}
+#usr{
+    margin-top: 20px;
     text-align: center;
 }
 
@@ -200,22 +207,23 @@ input#repass {
 }
 
 #remember {
-    font-size: 20px;
+    font-size: 15px;
 }
 
 #btnLog {
-    padding: 1%;
+    padding: 2%;
+    margin-top: -5px;
 }
 
 #log {
     margin: auto;
     display: block;
-    width: 160px;
-    height: 50px;
-    color: white;
-    font-size: 20px;
+    width: 100px;
+    height: 30px;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
     border-radius: 25px;
-    background-color: blue;
+    background-color: rgb(253, 249, 6);
 }
 
 p {
