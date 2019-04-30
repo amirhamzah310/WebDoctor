@@ -13,14 +13,14 @@
 <div class="blok"></div>
 <div class="header">
     <h1 class="judul">PROFIL <?=strtoupper($nama)?></h1>
-    <div class="foto">
-
-    </div>
-    <div class="konten">
-        Username : <?=$res[0][0]?><br>
-        Tanggal Lahir : <?=$res[0][2]?><br>
-        Kota : <?=$res[0][3]?><br>
-        Alamat : <?=$res[0][4]?><br>
-        Email : <?=$res[0][5]?><br>
-    </div>
+</div>
+<div class="foto">
+    
+</div>
+<div class="konten">
+    Username : <?=$res[0][0]?><br>
+    Tanggal Lahir : <?=$res[0][2]?><br>
+    Kota : <?=$res[0][3]?><br>
+    Alamat : <?=$res[0][4]?><br>
+    Email : <?=$res[0][5]?><br>
 </div>

@@ -19,6 +19,6 @@
         <th>Gejala</th>
     </tr>    
 </table>
-<form action="" method="get">
+<form action="homepage" method="get">
     <input type="submit" id="btnKembali" value="Kembali">
 </form>
