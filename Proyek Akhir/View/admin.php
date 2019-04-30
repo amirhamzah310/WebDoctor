@@ -16,6 +16,8 @@
     <div class="menuKanan">
         <a href="index.php">Logout</a>
     </div>
+</div>
+<div class="blok"></div>
 <table>
     <tr>
         <th>Kode Penyakit</th>

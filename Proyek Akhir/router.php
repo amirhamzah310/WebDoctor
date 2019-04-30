@@ -33,6 +33,11 @@
                 $log = new RiwayatController();
                 echo $log->start();
                 break;
+            case $baseURL."/admin";
+                require_once "Controller/adminController.php";
+                $log = new AdminController();
+                echo $log->start();
+                break;
             default:
                 echo '404 not found';
                 break;
