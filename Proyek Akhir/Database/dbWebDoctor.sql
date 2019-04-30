@@ -3,9 +3,10 @@ CREATE TABLE Member(
 	namaMember varchar(50) NOT NULL,
 	tglLahir date NOT NULL,
 	kota varchar(25) NOT NULL,
-	alamat varchar(100) NOT NULL,
-	peran tinyint(1) NOT NULL,
-	email varchar(32) NOT NULL
+	alamat varchar(100) NOT NULL,	
+	email varchar(32) NOT NULL,
+	password varchar(32) NOT NULL,
+	peran tinyint(1) NOT NULL
 );
 
 CREATE TABLE Gejala(

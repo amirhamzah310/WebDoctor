@@ -1,11 +1,11 @@
 <div class="nav">
     <div class="menuKiri">
-        <p id="halonama">Halo, <?=$nama?>!</p>
+        <a href="profile"><p id="halonama">Halo, <?=$nama?>!</p></a>
     </div>
     <div class="menuKanan">
         <a href="homepage">Home</a>
         <span id="pembatas">|</span>
-        <a href="">Lihat Riwayat Penyakit</a>
+        <a href="riwayat">Lihat Riwayat Penyakit</a>
         <span id="pembatas">|</span>
         <a href="index.php">Logout</a>
     </div>
