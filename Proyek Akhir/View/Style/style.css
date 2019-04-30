@@ -134,7 +134,7 @@ table {
     width: 800px;
     background-color: rgb(255, 254, 254);
     margin: auto;
-    padding:50px;
+    padding: 50px;
 }
 
 .header {
@@ -142,9 +142,9 @@ table {
 }
 
 .header .judul {
-    padding:10px;
-    margin-top:-50px;
-    font-size: 35px; 
+    padding: 10px;
+    margin-top: -50px;
+    font-size: 35px;
     font-weight: bold;
 }
 
@@ -172,7 +172,8 @@ h1 {
     margin-top: 10px;
     text-align: center;
 }
-#usr{
+
+#usr {
     margin-top: 20px;
     text-align: center;
 }
@@ -451,4 +452,14 @@ option {
 
 .pilihanMenu a:hover {
     color: white;
+}
+
+#upfile {
+    display: none;
+}
+
+#displayPicture {
+    display: block;
+    margin: 10px auto;
+    border-radius: 50%;
 }

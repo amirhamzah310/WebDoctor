@@ -133,3 +133,18 @@ function checkLengkap() {
         return false;
     }
 }
+
+function trigger() {
+    document.querySelector('#upfile').click();
+}
+
+function display(e) {
+    if (e.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+            document.querySelector('#displayPicture').setAttribute('src', e.target.result);
+        }
+        reader.readAsDataURL(e.files[0]);
+    }
+}

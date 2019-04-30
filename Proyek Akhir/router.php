@@ -1,7 +1,7 @@
 <?php
     $url = $_SERVER['REDIRECT_URL'];
     $baseURL = '/WebDoctor/Proyek Akhir';
-    if($_SERVER["REQUEST_METHOD"]=="GET"){
+    if($_SERVER['REQUEST_METHOD']=="GET"){
         switch ($url) {
             case $baseURL."/profile":
                 require_once "Controller/profileController.php";
@@ -48,8 +48,13 @@
                 break;
         }
     }
-    else if($_SERVER["REQUEST_METHOD"]=="POST"){
+    else if($_SERVER['REQUEST_METHOD']=="POST"){
         switch ($url) {
+            case $baseURL."/upload":
+                require_once "Controller/fileController.php";
+                $file = new FileController();
+                echo $file->upload();
+                break;
             case $baseURL."/updatepassword":
                 require_once "Controller/loginController.php";
                 $baru = new LoginController();

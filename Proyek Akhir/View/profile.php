@@ -1,6 +1,8 @@
 <div class="nav">
     <div class="menuKiri">
-        <a href="profile"><p id="halonama">Halo, <?=$nama?>!</p></a>
+        <a href="profile">
+            <p id="halonama">Halo, <?=$nama?>!</p>
+        </a>
     </div>
     <div class="menuKanan">
         <a href="homepage">Home</a>
@@ -15,7 +17,19 @@
     <h1 class="judul">PROFIL <?=strtoupper($nama)?></h1>
 </div>
 <div class="foto">
-    
+    <form action="upload" method="post" enctype="multipart/form-data">
+        <label for="profileImage">Foto Anda</label><br>
+        <?php
+            if($res[0][8]!=""){
+                echo "<img src='View/Style/uploads/".$res[0][8]."'>";
+            }
+            else{
+                echo "<img src='View/Style/Images/no-profile.jpg' id='displayPicture' onclick='trigger()'>";
+            }
+        ?>
+        <input type="file" name="upfile" id="upfile" onchange="display(this)"><br>
+        <input type="submit" value="Simpan">
+    </form>
 </div>
 <div class="konten">
     Username : <?=$res[0][0]?><br>
