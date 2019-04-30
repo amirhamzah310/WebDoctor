@@ -347,6 +347,11 @@ select#selectKota {
     left: 0;
 }
 
+.menuKiri a {
+    text-decoration: none;
+    color: #666;
+}
+
 .menuKanan {
     position: absolute;
     top: 15px;
@@ -356,8 +361,10 @@ select#selectKota {
 .menuKanan a {
     text-decoration: none;
     padding: 15px;
+    color: #666;
 }
 
+.menuKiri a:hover,
 .menuKanan a:hover {
     color: white;
 }
@@ -423,17 +430,17 @@ option {
 }
 
 /*pilihan menu pada halaman utama admin*/
-.pilihanMenu{
+.pilihanMenu {
     position: absolute;
     top: 5px;
     left: 5px;
 }
 
-.pilihanMenu a{
+.pilihanMenu a {
     text-decoration: none;
     padding: 15px;
 }
 
-.pilihanMenu a:hover{
+.pilihanMenu a:hover {
     color: white;
 }

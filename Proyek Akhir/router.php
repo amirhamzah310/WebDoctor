@@ -3,12 +3,17 @@
     $baseURL = '/WebDoctor/Proyek Akhir';
     if($_SERVER["REQUEST_METHOD"]=="GET"){
         switch ($url) {
-            case $baseURL."/gejala";
+            case $baseURL."/profile":
+                require_once "Controller/profileController.php";
+                $pp = new ProfileController();
+                echo $pp->control();
+                break;
+            case $baseURL."/gejala":
                 require_once "Controller/gejalaController.php";
                 $gejala = new GejalaController();
                 echo $gejala->show();
                 break;
-            case $baseURL."/homepage";
+            case $baseURL."/homepage":
                 require_once "Controller/homeController.php";
                 $home = new HomeController();
                 echo $home->start();
@@ -28,12 +33,12 @@
                 $log = new LoginController();
                 echo $log->start();
                 break;
-            case $baseURL."/riwayat";
+            case $baseURL."/riwayat":
                 require_once "Controller/riwayatController.php";
                 $log = new RiwayatController();
                 echo $log->start();
                 break;
-            case $baseURL."/admin";
+            case $baseURL."/admin":
                 require_once "Controller/adminController.php";
                 $log = new AdminController();
                 echo $log->start();
