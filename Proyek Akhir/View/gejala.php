@@ -1,11 +1,16 @@
 <div class="nav">
     <div class="menuKiri">
-        <p id="halonama">Halo, <?=$nama?>!</p>
+        <a href="profile">
+            <?php
+                echo "<img src='View/Style/uploads/".$profil."' id='pp'>";
+            ?>
+            <p id="halonama">Halo, <?=$nama?>!</p>
+        </a>
     </div>
     <div class="menuKanan">
         <a href="homepage">Home</a>
         <span id="pembatas">|</span>
-        <a href="">Lihat Riwayat Penyakit</a>
+        <a href="riwayat">Lihat Riwayat Penyakit</a>
         <span id="pembatas">|</span>
         <a href="index.php">Logout</a>
     </div>
@@ -15,12 +20,12 @@
     <h1 class="judul">Silahkan pilih gejala yang Anda alami</h1>
     <div id="pilih">
         <!-- <form action="penyakit" method="post"> -->
-            <?php
+        <?php
                 foreach ($res as $key => $value) {
                     echo '<input type="checkbox" name='.$value[0].'>'.$value[0];
                 }
             ?>
-            <a href="#popup"><button id="btnMulai">Mulai</button></a>
+        <a href="#popup"><button id="btnMulai">Mulai</button></a>
         </form>
     </div>
 </div>

@@ -1,6 +1,11 @@
 <div class="nav">
     <div class="menuKiri">
-        <a href="profile"><p id="halonama">Halo, <?=$nama?>!</p></a>
+        <a href="profile">
+        <?php
+            echo "<img src='View/Style/uploads/".$profil."' id='pp'>";
+        ?>
+            <p id="halonama">Halo, <?=$nama?>!</p>
+        </a>
     </div>
     <div class="menuKanan">
         <a href="homepage">Home</a>

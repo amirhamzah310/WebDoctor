@@ -15,10 +15,19 @@
             session_start();
             $nama = $_SESSION['userlogin'];
             session_write_close();
+            $query = "SELECT `profile` FROM `member` WHERE `namaMember`='$nama'";
+            $profil = $this->db->executeSelectQuery($query);
+            if($profil[0][0]==""){
+                $profil="no-profile.jpg";
+            }
+            else{
+                $profil=$profil[0][0];
+            }
             return View::createView('gejala.php',[
                 // "kategori"=>$kategori,
                 "nama"=>$nama,
-                "res"=>$res
+                "res"=>$res,
+                "profil"=>$profil
             ]);
         }
     }

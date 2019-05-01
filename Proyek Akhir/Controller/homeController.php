@@ -14,9 +14,15 @@
             session_start();
             $nama = $_SESSION['userlogin'];
             session_write_close();
+            $query = "SELECT `profile` FROM `member` WHERE `namaMember`='$nama'";
+            $profil = $this->db->executeSelectQuery($query);
+            if($profil[0][0]==""){
+                $profil="no-profile.jpg";
+            }
             return View::createView('home.php',[
                 "nama"=> $nama,
-                "res"=> $res
+                "res"=> $res,
+                "profil"=>$profil
             ]);
         }
     }

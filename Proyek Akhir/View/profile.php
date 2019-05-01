@@ -1,6 +1,9 @@
 <div class="nav">
     <div class="menuKiri">
         <a href="profile">
+            <?php
+                echo "<img src='View/Style/uploads/".$res[0][8]."' id='pp'>";
+            ?>
             <p id="halonama">Halo, <?=$nama?>!</p>
         </a>
     </div>
@@ -20,12 +23,7 @@
     <form action="upload" method="post" enctype="multipart/form-data">
         <label for="profileImage">Foto Anda</label><br>
         <?php
-            if($res[0][8]!=""){
-                echo "<img src='View/Style/uploads/".$res[0][8]."'>";
-            }
-            else{
-                echo "<img src='View/Style/Images/no-profile.jpg' id='displayPicture' onclick='trigger()'>";
-            }
+            echo "<img src='View/Style/uploads/".$res[0][8]."' id='displayPicture' onclick='trigger()'>";
         ?>
         File yang diupload maksimum berukuran 30 x 30
         <input type="file" name="upfile" id="upfile" onchange="display(this)"><br>

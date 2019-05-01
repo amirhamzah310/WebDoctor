@@ -340,17 +340,11 @@ select#selectKota {
     background-color: lightblue;
 }
 
-#halonama {
-    font-size: 20px;
-    line-height: 45px;
-    display: inline;
-    padding: 15px;
-}
-
 .menuKiri {
     position: absolute;
     top: 0;
     left: 0;
+    height: 50px;
 }
 
 .menuKiri a {
@@ -373,6 +367,20 @@ select#selectKota {
 .menuKiri a:hover,
 .menuKanan a:hover {
     color: white;
+}
+
+#halonama {
+    float: left;
+    font-size: 20px;
+    display: inline;
+    padding: 15px;
+}
+
+#pp {
+    float: left;
+    width: 45px;
+    height: 45px;
+    padding: 2.5px;
 }
 
 form input {
