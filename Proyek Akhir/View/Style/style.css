@@ -145,14 +145,6 @@ table {
     font-weight: bold;
 }
 
-.atas {
-    background-image: url('Images/logo.png');
-    background-position: center;
-    height: 200px;
-    padding: 25px;
-    background-repeat: no-repeat;
-}
-
 body {
     background-color: #eaeaea;
     color: #666;
@@ -160,6 +152,10 @@ body {
 
 h1 {
     text-align: center;
+}
+
+#bawah {
+    margin-top: 50px;
 }
 
 #confirmpss,
@@ -338,6 +334,7 @@ select#selectKota {
     height: 50px;
     width: 100%;
     background-color: lightblue;
+    z-index: 9999999px;
 }
 
 .menuKiri {
@@ -502,4 +499,66 @@ option {
     display: block;
     background-color: red;
     color: white;
+}
+
+.mySlides {
+    display: none;
+}
+
+img#gbrSlide {
+    vertical-align: middle;
+    width: 100%;
+}
+
+/* slideshow */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+/* text */
+.text {
+    color: black;
+    font-size: 20px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: -30px;
+    width: 100%;
+    text-align: center;
+}
+
+/* fading */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+    .text {
+        font-size: 11px
+    }
 }

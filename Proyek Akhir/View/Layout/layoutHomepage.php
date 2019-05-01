@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="View/Style/style.css">
     <script src="View/Script/script.js" defer></script>
     <script src="View/Script/SignUp.js" defer></script>
-    <!-- <script src="View/Script/ajaxHome.js" defer></script> -->
 </head>
 
 <body>
