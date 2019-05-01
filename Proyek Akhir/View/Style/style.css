@@ -473,6 +473,13 @@ option {
     text-align: center;
 }
 
+#simpan,
+#hapusFoto {
+    float: left;
+    width: 70px;
+    height: 25px;
+}
+
 .profile {
     display: flex;
 }
@@ -482,4 +489,17 @@ option {
     margin: auto;
     float: left;
     font-size: 20px;
+}
+
+.delete {
+    margin: auto;
+}
+
+#hapus {
+    margin: 10px auto;
+    width: 170px;
+    height: 40px;
+    display: block;
+    background-color: red;
+    color: white;
 }

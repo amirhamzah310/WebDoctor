@@ -67,5 +67,15 @@
             unset($_SESSION['userlogin']);
             session_destroy();
         }
+
+        public function deleteAkun(){
+            session_start();
+            $nama = $_SESSION['userlogin'];
+            $query = "DELETE FROM `member` WHERE `namaMember` = '$nama'";
+            $this->db->executeNonSelectQuery($query);
+            unset($_SESSION['userlogin']);
+            unset($nama);
+            session_destroy();
+        }
     }
 ?>
