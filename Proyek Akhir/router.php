@@ -49,6 +49,11 @@
                 $log = new AdminController();
                 echo $log->start();
                 break;
+            case $baseURL."/updateHubungan":
+                require_once "Controller/updateController.php"
+                $log = new UpdateController();
+                echo $log->start();
+                break;
             default:
                 echo '404 not found';
                 break;

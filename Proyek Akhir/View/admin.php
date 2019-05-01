@@ -2,7 +2,12 @@
     <div class="menuKiri">
         <p id="halonama">Halo, <?=$namaAdmin?>!</p>
     </div>
-    <div class="pilihanMenu">
+    <div class="menuKanan">
+        <a href="index.php">Logout</a>
+    </div>
+</div>
+<div class="blok"></div>
+<div class="pilihanMenu">
         <a href="">All</a>
         <span id="pembatas">|</span>
         <a href="">Penyakit</a>
@@ -12,12 +17,7 @@
         <a href="">Kategori</a>
         <span id="pembatas">|</span>
         <a href="">Update</a>
-    </div>
-    <div class="menuKanan">
-        <a href="index.php">Logout</a>
-    </div>
 </div>
-<div class="blok"></div>
 <table>
     <tr>
         <th>Kode Penyakit</th>
@@ -28,3 +28,4 @@
         <th>Nama Kategori</th>
     </tr>
 </table>
+</div>

@@ -320,6 +320,7 @@ select#selectKota {
     margin-top: 5px;
 }
 
+#btnKembali,
 #sign_in,
 #btnMulai {
     margin: auto;
@@ -444,10 +445,8 @@ option {
 }
 
 /*pilihan menu pada halaman utama admin*/
-.pilihanMenu {
-    position: absolute;
-    top: 5px;
-    left: 5px;
+.pilihanMenu {    
+    margin: auto
 }
 
 .pilihanMenu a {
