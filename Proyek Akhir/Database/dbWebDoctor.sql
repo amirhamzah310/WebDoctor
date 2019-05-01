@@ -42,17 +42,17 @@ CREATE TABLE Gejala(
 CREATE TABLE Diagnosa(
 	waktu DATE NOT NULL,
 	kodePenyakit INT(12) NOT NULL,
-	idMember INT(12) NOT NULL,
+	username VARCHAR(12) NOT NULL,
 	CONSTRAINT FK_Penyakit FOREIGN KEY(kodePenyakit)
 	REFERENCES Penyakit(kodePenyakit),
-	CONSTRAINT FK_Member PRIMARY KEY(idMember)
-	REFERENCES Member(idMember)
+	CONSTRAINT FK_Member FOREIGN KEY(username)
+	REFERENCES Member(username)
 );
 
 CREATE TABLE Hubungan(
 	kodePenyakit INT(12) NOT NULL,
 	kodeGejala INT(12) NOT NULL,
-	CONSTRAINT FK_Penyakit FOREIGN KEY(kodePenyakit)
+	CONSTRAINT FK_Penyakit2 FOREIGN KEY(kodePenyakit)
 	REFERENCES Penyakit(kodePenyakit),
 	CONSTRAINT FK_Gejala FOREIGN KEY(kodeGejala)
 	REFERENCES Gejala(kodeGejala)
@@ -60,11 +60,11 @@ CREATE TABLE Hubungan(
 
 
 CREATE TABLE Punya(
-	idMember INT(12) NOT NULL,
+	username VARCHAR(12) NOT NULL,
 	kodeGejala INT(12) NOT NULL,
-	CONSTRAINT FK_Member FOREIGN KEY(idMember)
-	REFERENCES Member(idMember),
-	CONSTRAINT FK_Gejala FOREIGN KEY(kodeGejala)
+	CONSTRAINT FK_Member2 FOREIGN KEY(username)
+	REFERENCES Member(username),
+	CONSTRAINT FK_Gejala2 FOREIGN KEY(kodeGejala)
 	REFERENCES Gejala(kodeGejala)
 );
 
