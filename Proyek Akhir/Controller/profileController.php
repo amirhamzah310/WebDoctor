@@ -14,9 +14,12 @@
             session_write_close();
             $query = "SELECT * FROM `member` WHERE `namaMember`='$nama'";
             $res = $this->db->executeSelectQuery($query);
-            return View::createView('profile.php',[
+            $query = "SELECT `profil` FROM `member` WHERE `namaMember`='$nama'";
+            $profil = $this->db->executeSelectQuery($query);
+            return View::createHomepage('profile.php',[
                 "nama"=> $nama,
-                "res"=> $res
+                "res"=> $res,
+                "profil"=>$profil
             ]);
         }
     }
