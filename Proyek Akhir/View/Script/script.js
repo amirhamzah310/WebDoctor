@@ -59,7 +59,7 @@ function cekKota() {
 
 function showfield(name) {
     if (name == 'Other') {
-        document.getElementById('txtbox').innerHTML = 'Masukkan kota Anda: <input type="text" name="other" />';
+        document.getElementById('txtbox').innerHTML = 'Masukkan kota Anda: <input type="text" name="other">';
     } else {
         document.getElementById('txtbox').innerHTML = '';
     }
@@ -98,12 +98,11 @@ function checkRePass() {
 }
 
 function checkuser() {
-    if(document.getElementById('username').value.length < 6){
+    if (document.getElementById('username').value.length < 6) {
         document.getElementById('userlength').style.color = 'red';
         document.getElementById('userlength').innerHTML = 'username terlalu pendek';
         return false;
-    }
-    else if (document.getElementById('username').value.length > 12) {
+    } else if (document.getElementById('username').value.length > 12) {
         document.getElementById('userlength').style.color = 'red';
         document.getElementById('userlength').innerHTML = 'username terlalu panjang';
         return false;

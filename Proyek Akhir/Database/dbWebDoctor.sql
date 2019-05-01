@@ -13,6 +13,8 @@ CREATE TABLE Member(
 	email VARCHAR(32) NOT NULL,
 	kataSandi VARCHAR(32) NOT NULL,
 	peran TINYINT(1) NOT NULL,
+	profil VARCHAR(50) NOT NULL,
+	tglGabung DATE NOT NULL,
 	CONSTRAINT PK_Member PRIMARY KEY(username),
 	CONSTRAINT FK_Kota FOREIGN KEY(kota)
 	REFERENCES Kota(namaKota)
@@ -72,4 +74,4 @@ INSERT INTO Kota(idKota, namaKota)
 VALUES(1, 'Bali'), (2, 'Bandung'), (3, 'Jakarta'), (4, 'Semarang'), (5, 'Yogyakarta');
 
 INSERT INTO Member
-VALUES('admin', 'Admin WebDoctor', '1999-05-30', 'Bandung', 'Bukit Jarian 14A', 'invers273@gmail.com', 'BE6BD7A784BB6A2130E13C2EA09014C4', 1);
+VALUES('admin', 'Admin WebDoctor', '1999-05-30', 'Bandung', 'Bukit Jarian 14A', 'invers273@gmail.com', 'BE6BD7A784BB6A2130E13C2EA09014C4', 1, 'no-profile.jpg','2019-04-30');

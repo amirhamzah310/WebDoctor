@@ -23,7 +23,7 @@
             if(isset($pss)&&$pss!=""){
                 $pss=$this->db->escapeString($pss);
                 $hashedPassword=md5($pss);
-                $query.="`password`='$hashedPassword'";
+                $query.="`kataSandi`='$hashedPassword'";
             }
             $res = $this->db->executeSelectQuery($query);
             if(count($res)!=0){

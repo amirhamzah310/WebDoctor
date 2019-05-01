@@ -2,7 +2,7 @@
     <div class="menuKiri">
         <a href="profile">
         <?php
-            echo "<img src='View/Style/uploads/".$profil."' id='pp'>";
+            echo "<img src='View/Style/uploads/".$profil[0][0]."' id='pp'>";
         ?>
             <p id="halonama">Halo, <?=$nama?>!</p>
         </a>

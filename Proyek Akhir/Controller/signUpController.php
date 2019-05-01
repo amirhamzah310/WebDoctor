@@ -22,6 +22,8 @@
         }
 
         public function signUp(){
+            $dt = new DateTime();
+            $tglJoin = $dt->format('Ymd');
             $nama=$_POST['inputNama'];
             $tahun=$_POST['year'];
             $bulan=$_POST['month'];
@@ -31,8 +33,7 @@
             $user=$_POST['iUser'];
             $email=$_POST['inputEmail'];
             $password=$_POST['inputPass'];
-            $other=$_POST['other'];
-            $query="INSERT INTO `member`(`username`,`namaMember`,`tglLahir`,`kota`,`alamat`,`email`,`kataSandi`,`peran`) VALUES(";
+            $query="INSERT INTO `member`(`username`,`namaMember`,`tglLahir`,`kota`,`alamat`,`email`,`kataSandi`,`peran`,`profil`,`tglGabung`) VALUES(";
             if(isset($user)&&$user!=""){
                 $user=$this->db->escapeString($user);
                 $query.="'$user',";
@@ -57,6 +58,7 @@
             if(isset($kota)&&$kota!=""){
                 $kota=$this->db->escapeString($kota);
                 if($kota=="Other"){
+                    $other=$_POST['other'];
                     $q = "INSERT INTO `kota`(`namaKota`) VALUES ('$other')";
                     $this->db->executeNonSelectQuery($q);
                     $query.="'$other',";
@@ -77,7 +79,7 @@
                 $hashedPassword=md5($password);
                 $query.="'$hashedPassword',";
             }
-            $query.="0);";
+            $query.="0,'no-profile.jpg','$tglJoin')";
             $this->db->executeNonSelectQuery($query);
         }
     }

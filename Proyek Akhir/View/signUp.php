@@ -57,7 +57,7 @@
                         echo "</option>";
                     }
                 ?>
-                <option value="Other">lainnya</option>
+                <option value="Other">Lainnya</option>
             </select>
             <div id="txtbox"></div>
             <span id="valkota"></span>
