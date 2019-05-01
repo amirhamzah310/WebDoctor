@@ -52,7 +52,7 @@ function cekKota() {
         kota = true;
     } else {
         document.getElementById('valkota').style.color = 'red';
-        document.getElementById('valkota').innerHTML = 'Harus diisi!';
+        document.getElementById('valkota').innerHTML = 'Wajib diisi!';
         kota = false;
     }
 }
@@ -98,7 +98,12 @@ function checkRePass() {
 }
 
 function checkuser() {
-    if (document.getElementById('username').value.length > 12) {
+    if(document.getElementById('username').value.length < 6){
+        document.getElementById('userlength').style.color = 'red';
+        document.getElementById('userlength').innerHTML = 'username terlalu pendek';
+        return false;
+    }
+    else if (document.getElementById('username').value.length > 12) {
         document.getElementById('userlength').style.color = 'red';
         document.getElementById('userlength').innerHTML = 'username terlalu panjang';
         return false;
