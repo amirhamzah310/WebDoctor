@@ -468,3 +468,18 @@ option {
     margin: 10px auto;
     border-radius: 50%;
 }
+
+#lblFoto {
+    text-align: center;
+}
+
+.profile {
+    display: flex;
+}
+
+.foto,
+.profil {
+    margin: auto;
+    float: left;
+    font-size: 20px;
+}
