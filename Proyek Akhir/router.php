@@ -61,6 +61,18 @@
     }
     else if($_SERVER['REQUEST_METHOD']=="POST"){
         switch ($url) {
+            case $baseURL."/deleteAkun":
+                require_once "Controller/loginController.php";
+                $log = new LoginController();
+                echo $log->deleteAkun();
+                header('Location: index.php');
+                break;
+            case $baseURL."/reset":
+                require_once "Controller/fileController.php";
+                $file = new FileController();
+                echo $file->reset();
+                header('Location: homepage');
+                break;
             case $baseURL."/upload":
                 require_once "Controller/fileController.php";
                 $file = new FileController();

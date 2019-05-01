@@ -160,3 +160,12 @@ function display(e) {
         reader.readAsDataURL(e.files[0]);
     }
 }
+
+function deleteAkun() {
+    var konfirmasi = confirm("Apakah Anda yakin ingin menghapus akun Anda?");
+    if (konfirmasi == true) {
+        return true;
+    } else {
+        return false;
+    }
+}
