@@ -64,7 +64,7 @@
 
         public function logout(){
             session_start();
-            $nama = $_SESSION['userlogin'];
+            unset($_SESSION['userlogin']);
             session_destroy();
         }
     }
