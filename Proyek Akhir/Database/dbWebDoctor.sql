@@ -13,7 +13,7 @@ CREATE TABLE Member(
 	email VARCHAR(32) NOT NULL,
 	kataSandi VARCHAR(32) NOT NULL,
 	peran TINYINT(1) NOT NULL,
-	CONSTRAINT PK_Member PRIMARY KEY(username)
+	CONSTRAINT PK_Member PRIMARY KEY(username),
 	CONSTRAINT FK_Kota FOREIGN KEY(kota)
 	REFERENCES Kota(namaKota)
 );
@@ -28,7 +28,7 @@ CREATE TABLE Penyakit(
 	kodePenyakit INT(12) NOT NULL,
 	namaPenyakit VARCHAR(30) NOT NULL,
 	idKategori INT(12) NOT NULL,
-	CONSTRAINT PK_Penyakit PRIMARY KEY(kodePenyakit)
+	CONSTRAINT PK_Penyakit PRIMARY KEY(kodePenyakit),
 	CONSTRAINT FK_Kategori FOREIGN KEY(idKategori)
 	REFERENCES Kategori(idKategori)
 );
@@ -44,7 +44,7 @@ CREATE TABLE Diagnosa(
 	kodePenyakit INT(12) NOT NULL,
 	idMember INT(12) NOT NULL,
 	CONSTRAINT FK_Penyakit FOREIGN KEY(kodePenyakit)
-	REFERENCES Penyakit(kodePenyakit)
+	REFERENCES Penyakit(kodePenyakit),
 	CONSTRAINT FK_Member PRIMARY KEY(idMember)
 	REFERENCES Member(idMember)
 );
@@ -53,7 +53,7 @@ CREATE TABLE Hubungan(
 	kodePenyakit INT(12) NOT NULL,
 	kodeGejala INT(12) NOT NULL,
 	CONSTRAINT FK_Penyakit FOREIGN KEY(kodePenyakit)
-	REFERENCES Penyakit(kodePenyakit)
+	REFERENCES Penyakit(kodePenyakit),
 	CONSTRAINT FK_Gejala FOREIGN KEY(kodeGejala)
 	REFERENCES Gejala(kodeGejala)
 );
@@ -63,7 +63,7 @@ CREATE TABLE Punya(
 	idMember INT(12) NOT NULL,
 	kodeGejala INT(12) NOT NULL,
 	CONSTRAINT FK_Member FOREIGN KEY(idMember)
-	REFERENCES Member(idMember)
+	REFERENCES Member(idMember),
 	CONSTRAINT FK_Gejala FOREIGN KEY(kodeGejala)
 	REFERENCES Gejala(kodeGejala)
 );
