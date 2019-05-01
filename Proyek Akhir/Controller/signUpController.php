@@ -31,6 +31,7 @@
             $user=$_POST['iUser'];
             $email=$_POST['inputEmail'];
             $password=$_POST['inputPass'];
+            $other=$_POST['other'];
             $query="INSERT INTO `member`(`username`,`namaMember`,`tglLahir`,`kota`,`alamat`,`email`,`password`,`peran`) VALUES(";
             if(isset($user)&&$user!=""){
                 $user=$this->db->escapeString($user);
@@ -55,7 +56,13 @@
             }
             if(isset($kota)&&$kota!=""){
                 $kota=$this->db->escapeString($kota);
-                $query.="'$kota',";
+                if($kota=="Other"){
+                    $q = "INSERT INTO `kota`(`namaKota`) VALUES ('$other')";
+                    $this->db->executeNonSelectQuery($q);
+                    $query.="'$other',";
+                } else{
+                    $query.="'$kota',";
+                }
             }
             if(isset($alamat)&&$alamat!=""){
                 $alamat=$this->db->escapeString($alamat);

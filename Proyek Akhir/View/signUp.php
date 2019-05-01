@@ -48,7 +48,7 @@
         </div> 
         <div id="lblKota">
             <label for="kota" class="city">Kota</label><br>
-            <select name="kota" id="selectKota">
+            <select name="kota" id="selectKota" onchange="showfield(this.options[this.selectedIndex].value)">
                 <option>Pilih Kota</option>
                 <?php
                     foreach ($kota as $key => $value) {
@@ -57,7 +57,9 @@
                         echo "</option>";
                     }
                 ?>
+                <option value="Other">lainnya</option>
             </select>
+            <div id="txtbox"></div>
             <span id="valkota"></span>
         </div>
         <div id="lblUser">

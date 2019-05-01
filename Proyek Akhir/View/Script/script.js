@@ -48,12 +48,20 @@ function cekTanggal() {
 function cekKota() {
     kota = document.getElementById('selectKota').value;
     if (kota != "Pilih Kota") {
-        document.getElementById('valttl').innerHTML = '';
+        document.getElementById('valkota').innerHTML = '';
         kota = true;
     } else {
         document.getElementById('valkota').style.color = 'red';
         document.getElementById('valkota').innerHTML = 'Harus diisi!';
         kota = false;
+    }
+}
+
+function showfield(name) {
+    if (name == 'Other') {
+        document.getElementById('txtbox').innerHTML = 'Masukkan kota Anda: <input type="text" name="other" />';
+    } else {
+        document.getElementById('txtbox').innerHTML = '';
     }
 }
 
