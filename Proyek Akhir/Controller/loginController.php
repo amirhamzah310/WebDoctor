@@ -29,7 +29,6 @@
             if(count($res)!=0){
                 if($res[0][0]==1){//admin
                     header('Location: admin');
-                    print_r("masuk");
                 }
                 else if($res[0][0]==0){ //user
                     session_start();
@@ -61,6 +60,12 @@
                 $query.="'$usr' OR `email`='$usr'";
             }
             $this->db->executeNonSelectQuery($query);
+        }
+
+        public function logout(){
+            session_start();
+            $nama = $_SESSION['userlogin'];
+            session_destroy();
         }
     }
 ?>

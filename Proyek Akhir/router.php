@@ -3,6 +3,12 @@
     $baseURL = '/WebDoctor/Proyek Akhir';
     if($_SERVER['REQUEST_METHOD']=="GET"){
         switch ($url) {
+            case $baseURL."/logout":
+                require_once "Controller/loginController.php";
+                $out = new LoginController();
+                echo $out->logout();
+                header('Location: index.php');
+                break;
             case $baseURL."/profile":
                 require_once "Controller/profileController.php";
                 $pp = new ProfileController();

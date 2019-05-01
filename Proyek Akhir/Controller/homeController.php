@@ -16,7 +16,7 @@
             session_write_close();
             $query = "SELECT `profil` FROM `member` WHERE `namaMember`='$nama'";
             $profil = $this->db->executeSelectQuery($query);
-            return View::createView('home.php',[
+            return View::createHomepage('home.php',[
                 "nama"=> $nama,
                 "res"=> $res,
                 "profil"=>$profil
