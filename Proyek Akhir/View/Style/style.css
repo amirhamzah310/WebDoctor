@@ -504,19 +504,20 @@ option {
 img#gbrSlide {
     vertical-align: middle;
     width: 100%;
+    z-index: -9999px;
 }
 
 img#gbrLogo {
-    /* vertical-align: middle; */
     display: block;
     margin: auto;
     width: 50%;
+    z-index: -9999px;
 }
 
 /* slideshow */
 .slideshow-container {
     max-width: 1000px;
-    position: relative;
+    /* position: relative; */
     margin: auto;
 }
 
@@ -525,8 +526,8 @@ img#gbrLogo {
     color: black;
     font-size: 20px;
     padding: 8px 12px;
-    position: absolute;
-    bottom: -30px;
+    position: relative;
+    bottom: -10px;
     width: 100%;
     text-align: center;
 }
@@ -564,4 +565,31 @@ img#gbrLogo {
     .text {
         font-size: 11px
     }
+}
+
+.konten {
+    margin-top: 50px;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+p#konten {
+    text-align: justify;
+}
+
+#icon {
+    list-style-type: none;
+    display: inline-block;
+    padding: 15px;
+}
+
+#icon a {
+    text-decoration: none;
+    color: black;
+}
+
+#icon a:hover {
+    color: blue;
 }
