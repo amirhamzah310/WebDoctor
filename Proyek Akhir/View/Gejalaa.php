@@ -1,7 +1,4 @@
-<div class="nav">
-    <div class="menuKiri">
-        <p id="halonama">Halo, <?=$namaAdmin?>!</p>
-    </div>
+<div class="nav">    
     <div class="pilihanMenu">
         <a href="">All</a>
         <span id="pembatas">|</span>

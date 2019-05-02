@@ -16,7 +16,7 @@ function cekTahun() {
         tahun = true;
     } else {
         document.getElementById('valttl').style.color = 'red';
-        document.getElementById('valttl').innerHTML = 'Harus diisi!';
+        document.getElementById('valttl').innerHTML = 'Wajib diisi!';
         tahun = false;
     }
 }
@@ -28,7 +28,7 @@ function cekBulan() {
         bulan = true;
     } else {
         document.getElementById('valttl').style.color = 'red';
-        document.getElementById('valttl').innerHTML = 'Harus diisi!';
+        document.getElementById('valttl').innerHTML = 'Wajib diisi!';
         bulan = false;
     }
 }
@@ -40,7 +40,7 @@ function cekTanggal() {
         tanggal = true;
     } else {
         document.getElementById('valttl').style.color = 'red';
-        document.getElementById('valttl').innerHTML = 'Harus diisi!';
+        document.getElementById('valttl').innerHTML = 'Wajib diisi!';
         tanggal = false;
     }
 }
@@ -167,5 +167,14 @@ function deleteAkun() {
         return true;
     } else {
         return false;
+    }
+}
+
+function checkInputGejala(){
+    if(document.getElementById('namaGejala').value == ''){
+        return false;
+    }
+    else{
+        return true;
     }
 }

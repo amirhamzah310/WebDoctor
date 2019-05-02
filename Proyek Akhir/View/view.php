@@ -29,5 +29,20 @@
             ob_end_clean();
             return $layout;
         }
+
+        public static function createAdmin($view, $param){
+            foreach ($param as $key => $value) {
+                $$key=$value;
+            }
+            ob_start();
+            include 'View/'.$view;
+            $content = ob_get_contents();
+            ob_end_clean();
+            ob_start();
+            include 'Layout/layoutAdmin.php';
+            $layout = ob_get_contents();
+            ob_end_clean();
+            return $layout;
+        }
     }
 ?>

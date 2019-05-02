@@ -24,5 +24,19 @@
                 "profil"=>$profil
             ]);
         }
+
+        public function addGejala(){
+            $query = "INSERT INTO `Gejala` (`namaGejala`) VALUES";
+            $temp = $_POST['namaGejala'];
+            if(isset($temp) && $temp != ''){
+                $temp = $this->db->escapeString($temp);
+                $query.= "('$temp')";
+            }
+            $res = $this->db->executeNonSelectQUery($query);
+        }
+
+        public function add(){
+            return View::createAdmin('addGejala.php',[]); 
+        }
     }
 ?>

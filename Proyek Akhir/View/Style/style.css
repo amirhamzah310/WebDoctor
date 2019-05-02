@@ -338,6 +338,7 @@ select#selectKota {
     z-index: 9999999px;
 }
 
+.pilihanMenu,
 .menuKiri {
     position: absolute;
     top: 0;
@@ -442,10 +443,6 @@ option {
 }
 
 /*pilihan menu pada halaman utama admin*/
-.pilihanMenu {    
-    margin: auto
-}
-
 .pilihanMenu a {
     text-decoration: none;
     padding: 15px;

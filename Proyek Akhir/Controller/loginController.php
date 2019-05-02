@@ -53,7 +53,7 @@
             if(isset($pss)&&$pss!=""){
                 $pss=$this->db->escapeString($pss);
                 $hashedPassword=md5($pss);
-                $query.="`password`='$hashedPassword' WHERE `username`=";
+                $query.="`kataSandi`='$hashedPassword' WHERE `username`=";
             }
             if(isset($usr)&&$usr!=""){
                 $usr=$this->db->escapeString($usr);

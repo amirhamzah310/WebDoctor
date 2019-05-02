@@ -3,6 +3,11 @@
     $baseURL = '/WebDoctor/Proyek Akhir';
     if($_SERVER['REQUEST_METHOD']=="GET"){
         switch ($url) {
+            case $baseURL."/viewGejala":
+                require_once "Controller/gejalaController.php";
+                $log = new GejalaController();
+                echo $log->add();
+                break;
             case $baseURL."/logout":
                 require_once "Controller/loginController.php";
                 $out = new LoginController();
@@ -48,12 +53,7 @@
                 require_once "Controller/adminController.php";
                 $log = new AdminController();
                 echo $log->start();
-                break;
-            case $baseURL."/updateHubungan":
-                require_once "Controller/updateController.php"
-                $log = new UpdateController();
-                echo $log->start();
-                break;
+                break;            
             default:
                 echo '404 not found';
                 break;
@@ -61,6 +61,12 @@
     }
     else if($_SERVER['REQUEST_METHOD']=="POST"){
         switch ($url) {
+            case $baseURL."/addGejala":
+                require_once "Controller/gejalaController.php";
+                $log = new GejalaController();
+                echo $log->addGejala();
+                header('Location: admin');
+                break;
             case $baseURL."/deleteAkun":
                 require_once "Controller/loginController.php";
                 $log = new LoginController();
@@ -95,6 +101,7 @@
                 $log = new LoginController();
                 echo $log->auth();
                 break;
+            
             default:
                 echo '404 not found';
                 break;

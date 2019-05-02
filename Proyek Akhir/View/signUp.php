@@ -65,7 +65,7 @@
         <div id="lblUser">
             <label for="username" class="users">Username</label><br>
             <span id="userlength"></span>
-            <input type="text" name="iUser" id="username" placeholder="Tidak boleh lebih dari 12 karakter" onkeyup='checkuser()'>
+            <input type="text" name="iUser" id="username" placeholder="Tidak boleh lebih dari 12 karakter" oninput='checkuser()'>
             <span id="userauth"></span>
         </div>
         <div id="lblEmail">
