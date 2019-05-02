@@ -1,8 +1,9 @@
 <fieldset>
     <legend>Tambah Penyakit</legend>
     <label>
+        <form action="addPenyakit" method="post">
         Nama Penyakit:
-        <input type="text" name="namaPenyakit"> 
+        <input type="text" name="namaPenyakit" id="namaPenyakit"> 
         <br><br>
         
         Kategori Penyakit:
@@ -19,9 +20,10 @@
         <br><br>
 
         <input type="submit" value="Submit">
+        </form>
     </label>     
 </fieldset>
 
-<form action="" method="get">
+<form action="admin" method="get">
     <input type="submit" id="btnKembali" value="Kembali">
 </form>

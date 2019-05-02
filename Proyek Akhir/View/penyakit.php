@@ -1,7 +1,4 @@
 <div class="nav">
-    <div class="menuKiri">
-        <p id="halonama">Halo, <?=$namaAdmin?>!</p>
-    </div>
     <div class="pilihanMenu">
         <a href="">All</a>
         <span id="pembatas">|</span>
@@ -14,7 +11,7 @@
         <a href="">Update</a>
     </div>
     <div class="menuKanan">
-        <a href="index.php">Logout</a>
+        <a href="logout">Logout</a>
     </div>
 <table>
     <tr>
@@ -23,9 +20,9 @@
         <th>ID Kategori</th>
     </tr>
 </table>
-<form action="" method="get">
+<form action="addPenyakit" method="get">
     <input type="submit" id="btnTambah" value="Tambah">
 </form>
-<form action="" method="get">
+<form action="admin" method="get">
     <input type="submit" id="btnKembali" value="Kembali">
 </form>
