@@ -22,9 +22,9 @@
             <span id="pembatas">|</span>
             <a href="viewGejala">Gejala</a>
             <span id="pembatas">|</span>
-            <a href="">Kategori</a>
+            <a href="viewKategori">Kategori</a>
             <span id="pembatas">|</span>
-            <a href="">Update</a>
+            <a href="updateHubungan">Update</a>
     </div>
     <div class="blok"></div>
     <div>        

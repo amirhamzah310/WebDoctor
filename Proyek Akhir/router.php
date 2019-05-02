@@ -23,6 +23,11 @@
                 $log = new PenyakitController();
                 echo $log->add();
                 break;
+            case $baseURL."/viewKategori":
+                require_once "Controller/kategoriController.php";
+                $log = new KategoriController();
+                echo $log->add();
+                break;
             case $baseURL."/logout":
                 require_once "Controller/loginController.php";
                 $out = new LoginController();
@@ -78,14 +83,26 @@
         switch ($url) {
             case $baseURL."/addGejala":
                 require_once "Controller/gejalaController.php";
-                $log = new GejalaController();
-                echo $log->addGejala();
+                $gej = new GejalaController();
+                echo $gej->addGejala();
                 header('Location: admin');
                 break;
             case $baseURL."/addPenyakit":
                 require_once "Controller/penyakitController.php";
-                $log = new PenyakitController();
-                echo $log->addPenyakit();
+                $peny = new PenyakitController();
+                echo $peny->addPenyakit();
+                header('Location: admin');
+                break;
+            case $baseURL."/addKategori":
+                require_once "Controller/kategoriController.php";
+                $kat = new KategoriController();
+                echo $kat->addKategori();
+                header('Location: admin');
+                break;
+            case $baseURL."/updateHubungan":
+                require_once "Controller/updateController.php";
+                $update = new UpdateController();
+                echo $update->updateHubungan();
                 header('Location: admin');
                 break;
             case $baseURL."/deleteAkun":

@@ -7,6 +7,7 @@
 <fieldset>
     <legend>Update Hubungan</legend>
     <label>
+        <form action="updateHubungan" method="POST">
         Nama Gejala:
         <select name="gejala">
             <option>Pilih Gejala</option>
@@ -34,9 +35,10 @@
         <br><br>
         
         <input type="submit" value="Submit">
+        </form>
     </label>
 </fieldset>
 
-<form action="" method="get">
+<form action="admin" method="get">
     <input type="submit" id="btnKembali" value="Kembali">
 </form>

@@ -30,7 +30,7 @@
             $temp = $_POST['namaGejala'];
             if(isset($temp) && $temp != ''){
                 $temp = $this->db->escapeString($temp);
-                $query.= "('$temp')";
+                $query.= "('$temp');";
             }
             $res = $this->db->executeNonSelectQUery($query);
         }

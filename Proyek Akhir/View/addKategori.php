@@ -1,12 +1,16 @@
 <fieldset>
     <legend>Tambah Kategori</legend>
     <label>
+        <form action="addKategori" method="POST">
         Nama Kategori:
-        <input type="text" name="namaKategori">
+        <input type="text" name="namaKategori" id="namaKategori">
+        <br><br>
+
         <input type="submit" value="Submit">
+        </form>
     </label>    
 </fieldset>
 
-<form action="" method="get">
+<form action="admin" method="get">
     <input type="submit" id="btnKembali" value="Kembali">
 </form>

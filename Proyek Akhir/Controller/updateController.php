@@ -17,5 +17,9 @@
                 "resPenyakit"=> $resPenyakit
             ]);
         }
+
+        public function updateHubungan(){
+            $query = "UPDATE `Hubungan` SET "//belum selesai
+        }
     }
 ?>
