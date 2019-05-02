@@ -3,6 +3,11 @@
     $baseURL = '/WebDoctor/Proyek Akhir';
     if($_SERVER['REQUEST_METHOD']=="GET"){
         switch ($url) {
+            case $baseURL."/diagnosa":
+                require_once "Controller/penyakitController.php";
+                $sakit = new PenyakitController();
+                echo $sakit->diagnose();
+                break;
             case $baseURL."/about":
                 require_once "Controller/aboutController.php";
                 $cp = new AboutController();
@@ -112,7 +117,6 @@
                 $log = new LoginController();
                 echo $log->auth();
                 break;
-            
             default:
                 echo '404 not found';
                 break;

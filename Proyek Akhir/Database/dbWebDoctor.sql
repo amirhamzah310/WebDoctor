@@ -64,6 +64,7 @@ CREATE TABLE Hubungan(
 CREATE TABLE Punya(
 	username VARCHAR(12) NOT NULL,
 	kodeGejala INT(12) NOT NULL,
+	waktu DATE NOT NULL,
 	CONSTRAINT FK_Member2 FOREIGN KEY(username)
 	REFERENCES Member(username),
 	CONSTRAINT FK_Gejala2 FOREIGN KEY(kodeGejala)

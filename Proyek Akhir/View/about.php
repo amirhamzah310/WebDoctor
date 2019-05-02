@@ -27,40 +27,53 @@
             Website ini dibuat untuk memenuhi penilaian tugas akhir mata kuliah Pemrograman Berbasis Web (PBW) dan
             mata kuliah Manajemen Informasi dan Basis Data (MIBD).
         </p>
+        <p id="konten">
+            Website ini akan menerima input berupa gejala-gejala yang dialami oleh user kemudian mendiagnosa penyakit
+            berdasarkan gejala-gejala yang diinput oleh user beserta kategori penyakitnya.
+            User dapat melihat riwayat penyakitnya (tanggal diagnosa, penyakit, gejala-gejala).
+            Apabila user menemui kesulitan, dapat menghubungi salah satu kontak dari ketiga admin dibawah. Terima kasih.
+        </p>
         <ul>
-            <li id="icon"><i class="fa fa-github"></i><a href="https://github.com/liondy/WebDoctor">WebDoctor</a></li>
+            <li>Lihat kode program di gitHub kami : WebDoctor</li>
+            <li id="icon"><i class="fab fa-github"></i><a href="https://github.com/liondy/WebDoctor">WebDoctor</a></li>
         </ul>
         <h2 id="mike">Ignatius Michael Liondy-2017730007</h2>
         <p id="konten">Mahasiswa Informatika Unpar angkatan 2017 - Pembuat Website</p>
         <ul>
-            <li id="icon"><i class="fa fa-instagram"></i><a href="https://www.instagram.com/michaelliondy/"
+            <li>Hubungi kami: </li>
+            <li id="icon"><i class="fab fa-instagram"></i><a href="https://www.instagram.com/michaelliondy/"
                     target="blank">mike</a></li>
-            <li id="icon"><i class="fa fa-facebook"></i><a href="https://www.facebook.com/michaelliondy"
+            <li id="icon"><i class="fab fa-facebook-square"></i><a href="https://www.facebook.com/michaelliondy"
                     target="blank">Michael Liondy</a></li>
-            <li id="icon"><i class="fa fa-github"></i><a href="https://github.com/liondy" target="blank">liondy</a></li>
-            <li id="icon"><i class="fa fa-google-plus-square"></i><a
+            <li id="icon"><i class="fab fa-github"></i><a href="https://github.com/liondy" target="blank">liondy</a>
+            </li>
+            <li id="icon"><i class="fas fa-envelope"></i><a
                     href="https://mail.google.com">2017730007@student.unpar.ac.id</a></li>
         </ul>
         <h2 id="indra">Indra Permana Sugianto-2017730008</h2>
         <p id="konten">Mahasiswa Informatika Unpar angkatan 2017 - Pembuat BasisData</p>
         <ul>
-            <li id="icon"><i class="fa fa-instagram"></i><a href="https://www.instagram.com/inpers273/"
+            <li>Hubungi kami: </li>
+            <li id="icon"><i class="fab fa-instagram"></i><a href="https://www.instagram.com/inpers273/"
                     target="blank">Indra Permana Sugianto</a></li>
-            <li id="icon"><i class="fa fa-facebook"></i><a href="https://www.facebook.com/inpers273"
+            <li id="icon"><i class="fab fa-facebook-square"></i><a href="https://www.facebook.com/inpers273"
                     target="blank">Indra Permana</a></li>
-            <li id="icon"><i class="fa fa-github"></i><a href="https://github.com/inpers273" target="blank">inpers273</a></li>
-            <li id="icon"><i class="fa fa-google-plus-square"></i><a
+            <li id="icon"><i class="fab fa-github"></i><a href="https://github.com/inpers273"
+                    target="blank">inpers273</a></li>
+            <li id="icon"><i class="fas fa-envelope"></i><a
                     href="https://mail.google.com">2017730008@student.unpar.ac.id</a></li>
         </ul>
         <h2 id="jode">Joshua Delavo-2017730028</h2>
         <p id="konten">Mahasiswa Informatika Unpar angkatan 2017 - Pembuat Laporan</p>
         <ul>
-            <li id="icon"><i class="fa fa-instagram"></i><a href="https://www.instagram.com/joshua_jode/"
+            <li>Hubungi kami: </li>
+            <li id="icon"><i class="fab fa-instagram"></i><a href="https://www.instagram.com/joshua_jode/"
                     target="blank">Joshua Delavo</a></li>
-            <li id="icon"><i class="fa fa-facebook"></i><a href="https://www.facebook.com/joshuaJodez"
+            <li id="icon"><i class="fab fa-facebook-square"></i><a href="https://www.facebook.com/joshuaJodez"
                     target="blank">Joshua Delavo</a></li>
-            <li id="icon"><i class="fa fa-github"></i><a href="https://github.com/JoshuaDelavo" target="blank">JoshuaDelavo</a></li>
-            <li id="icon"><i class="fa fa-google-plus-square"></i><a
+            <li id="icon"><i class="fab fa-github"></i><a href="https://github.com/JoshuaDelavo"
+                    target="blank">JoshuaDelavo</a></li>
+            <li id="icon"><i class="fas fa-envelope"></i><a
                     href="https://mail.google.com">2017730028@student.unpar.ac.id</a></li>
         </ul>
     </div>
