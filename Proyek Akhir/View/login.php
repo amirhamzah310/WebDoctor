@@ -4,7 +4,7 @@
     </div>
     <div class="slideshow-container">
         <div class="mySlides fade">
-            <img src="View/Style/Images/logo.png" id="gbrSlide">
+            <img src="View/Style/Images/logo.png" id="gbrLogo">
             <div class="text">Website pemberi diagnosis online berdasarkan gejala-gejala dari inputan user</div>
         </div>
         <div class="mySlides fade">
