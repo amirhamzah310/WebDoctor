@@ -9,16 +9,16 @@
         }
 
         public function show(){
-            $kategori = $_GET['dropdownPenyakit'];
-            $query = "SELECT `namaGejala` FROM `Gejala`";
+            // $kategori = $_GET['pilihPenyakit'];
+            $query = "SELECT namaGejala FROM Gejala";
             $res = $this->db->executeSelectQuery($query);
             session_start();
             $nama = $_SESSION['userlogin'];
-            $_SESSION['kateg'] = $kategori;
             session_write_close();
             $query = "SELECT `profil` FROM `member` WHERE `namaMember`='$nama'";
             $profil = $this->db->executeSelectQuery($query);
             return View::createHomepage('gejala.php',[
+                // "kategori"=>$kategori,
                 "nama"=>$nama,
                 "res"=>$res,
                 "profil"=>$profil

@@ -1,14 +1,20 @@
 <div class="header">
     <h1 class="judul">Silahkan pilih gejala yang Anda alami</h1>
     <div id="pilih">
-        <form action="diagnosa" method="get">
-            <?php
+        <?php
                 foreach ($res as $key => $value) {
-                    echo '<input type="checkbox" name="gejala[]" value='.$value[0].'>'.$value[0];
+                    echo '<input type="checkbox" name='.$value[0].'>'.$value[0];
                 }
             ?>
-            <input type="submit" id="btnMulai" value="Mulai">
-        <!-- <button id="btnMulai"><a href="#popup" id="mulai">Mulai</a></button> -->
+        <a href="#popup"><button id="btnMulai">Mulai</button></a>
         </form>
     </div>
 </div>
+<div id="popup">
+    <div class="window">
+        <a href="#" class="close-button" title="Close">X</a>
+        <h2>Berdasarkan gejala yang dipilih, Anda didiagnosa penyakit</h2>
+        <span id="sakit"></span>
+    </div>
+</div>
+<script src="View/Script/ajaxpenyakit.js"></script>

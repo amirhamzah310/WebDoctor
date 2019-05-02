@@ -9,7 +9,7 @@
             $this->db = new mysqlDB("localhost","root","","webdoctor");
         }
 
-        public function upload(){
+        public function upload(){            
             if ($_FILES['upfile']['name']!="") {
                 $oldName=$_FILES['upfile']['tmp_name'];
                 $newName=dirname(__DIR__)."\\View\\Style\\uploads\\".$_FILES['upfile']['name'];
