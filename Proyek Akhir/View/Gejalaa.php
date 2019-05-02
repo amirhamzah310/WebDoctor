@@ -19,9 +19,9 @@
         <th>Nama Gejala</th>
     </tr>
 </table>
-<form action="" method="get">
+<form action="addGejala" method="get">
     <input type="submit" id="btnTambah" value="Tambah">
 </form>
-<form action="" method="get">
+<form action="admin" method="get">
     <input type="submit" id="btnKembali" value="Kembali">
 </form>

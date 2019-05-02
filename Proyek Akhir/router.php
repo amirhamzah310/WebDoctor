@@ -72,6 +72,12 @@
                 echo $log->addGejala();
                 header('Location: admin');
                 break;
+            case $baseURL."/addPenyakit":
+                require_once "Controller/penyakitController.php";
+                $log = new PenyakitController();
+                echo $log->addPenyakit();
+                header('Location: admin');
+                break;
             case $baseURL."/deleteAkun":
                 require_once "Controller/loginController.php";
                 $log = new LoginController();

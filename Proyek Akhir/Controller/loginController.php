@@ -25,19 +25,19 @@
                 $hashedPassword=md5($pss);
                 $query.="`kataSandi`='$hashedPassword'";
             }
-            $res = $this->db->executeSelectQuery($query);
-            if(count($res)!=0){
-                if($res[0][0]==1){//admin
-                    header('Location: admin');
+            $res = $this->db->executeSelectQuery($query); //hasil execute query di atas jadi array 2D (tabel), fieldnya peran sama namaMember
+            if(count($res)!=0){ //periksa kalau array yg dikembalikan tidak kosong
+                if($res[0][0]==1){//kalau field peran nilainya 1 berarti admin
+                    header('Location: admin'); //maka diarahkan ke admin
                 }
-                else if($res[0][0]==0){ //user
+                else if($res[0][0]==0){ //kalau field peran nilainya 0 berarti user
                     session_start();
-                    $_SESSION['userlogin'] = $res[0][1];
+                    $_SESSION['userlogin'] = $res[0][1]; //buat session dengan nama userlogin lalu masukkan isi field namaMember
                     session_write_close();
-                    header('Location: homepage');
+                    header('Location: homepage'); //arahkan ke homepage user
                 }
             }
-            else{
+            else{ 
                 return View::createView('wronglogin.php',[]);
             }
         }

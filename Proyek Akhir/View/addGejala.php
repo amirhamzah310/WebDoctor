@@ -24,6 +24,6 @@
     </label>    
 </fieldset>
 
-<form action="" method="get">
+<form action="admin" method="get">
     <input type="submit" id="btnKembali" value="Kembali">
 </form>
