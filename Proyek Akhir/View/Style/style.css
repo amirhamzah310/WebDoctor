@@ -506,6 +506,13 @@ img#gbrSlide {
     width: 100%;
 }
 
+img#gbrLogo {
+    /* vertical-align: middle; */
+    display: block;
+    margin: auto;
+    width: 50%;
+}
+
 /* slideshow */
 .slideshow-container {
     max-width: 1000px;
