@@ -18,7 +18,7 @@
     <div class="pilihanMenu">
             <a href="">All</a>
             <span id="pembatas">|</span>
-            <a href="">Penyakit</a>
+            <a href="viewPenyakit">Penyakit</a>
             <span id="pembatas">|</span>
             <a href="viewGejala">Gejala</a>
             <span id="pembatas">|</span>

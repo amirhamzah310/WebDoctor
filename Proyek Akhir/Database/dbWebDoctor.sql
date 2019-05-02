@@ -21,13 +21,13 @@ CREATE TABLE Member(
 );
 
 CREATE TABLE Kategori(
-	idKategori INT(12) NOT NULL,
+	idKategori INT(12) NOT NULL AUTO_INCREMENT,
 	namaKategori VARCHAR(20) NOT NULL,
 	CONSTRAINT PK_Kategori PRIMARY KEY(idKategori)
 );
 
 CREATE TABLE Penyakit(
-	kodePenyakit INT(12) NOT NULL,
+	kodePenyakit INT(12) NOT NULL AUTO_INCREMENT,
 	namaPenyakit VARCHAR(30) NOT NULL,
 	idKategori INT(12) NOT NULL,
 	CONSTRAINT PK_Penyakit PRIMARY KEY(kodePenyakit),
@@ -36,7 +36,7 @@ CREATE TABLE Penyakit(
 );
 
 CREATE TABLE Gejala(
-	kodeGejala INT(12) NOT NULL,
+	kodeGejala INT(12) NOT NULL AUTO_INCREMENT,
 	namaGejala VARCHAR(30) NOT NULL,
 	CONSTRAINT PK_Gejala PRIMARY KEY(kodeGejala)	
 );

@@ -8,6 +8,11 @@
                 $log = new GejalaController();
                 echo $log->add();
                 break;
+            case $baseURL."/viewPenyakit":
+                require_once "Controller/penyakitController.php";
+                $log = new PenyakitController();
+                echo $log->add();
+                break;
             case $baseURL."/logout":
                 require_once "Controller/loginController.php";
                 $out = new LoginController();
