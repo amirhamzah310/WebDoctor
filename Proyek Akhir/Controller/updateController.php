@@ -18,8 +18,8 @@
             ]);
         }
 
-        public function updateHubungan(){
-            $query = "UPDATE `Hubungan` SET "//belum selesai
-        }
+        public function showUpdate(){
+            return View::createAdmin('updateHubungan.php', []);
+        }       
     }
 ?>
