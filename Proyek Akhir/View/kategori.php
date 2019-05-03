@@ -3,6 +3,14 @@
         <th>Kode Kategori</th>
         <th>Nama Kategori</th>
     </tr>
+    <?php
+        foreach($res as $key=>$value){
+            echo "<tr>";
+            echo "<td>".$value[0]."</td>";
+            echo "<td>".$value[1]."</td>";
+            echo "</tr>";
+        }
+    ?>
 </table>
 <form action="viewAddKategori" method="get">
     <input type="submit" id="btnTambah" value="Tambah">
