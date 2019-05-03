@@ -16,17 +16,32 @@
             case $baseURL."/viewGejala":
                 require_once "Controller/gejalaController.php";
                 $log = new GejalaController();
-                echo $log->add();
+                echo $log->showGejala();
+                break;
+            case $baseURL."/viewAddGejala":
+                require_once "Controller/gejalaController.php";
+                $gej = new GejalaController();
+                echo $gej->add();                
                 break;
             case $baseURL."/viewPenyakit":
                 require_once "Controller/penyakitController.php";
                 $log = new PenyakitController();
-                echo $log->add();
+                echo $log->showPenyakit();
+                break;
+            case $baseURL."/viewAddPenyakit":
+                require_once "Controller/penyakitController.php";
+                $peny = new PenyakitController();
+                echo $peny->add();                
                 break;
             case $baseURL."/viewKategori":
                 require_once "Controller/kategoriController.php";
                 $log = new KategoriController();
-                echo $log->add();
+                echo $log->showKategori();
+                break;
+            case $baseURL."/viewAddKategori":
+                require_once "Controller/kategoriController.php";
+                $kat = new KategoriController();
+                echo $kat->add();                
                 break;
             case $baseURL."/logout":
                 require_once "Controller/loginController.php";
@@ -81,23 +96,23 @@
     }
     else if($_SERVER['REQUEST_METHOD']=="POST"){
         switch ($url) {
-            case $baseURL."/addGejala":
+            case $baseURL."/tambahGejala":
                 require_once "Controller/gejalaController.php";
-                $gej = new GejalaController();
-                echo $gej->addGejala();
-                header('Location: admin');
-                break;
-            case $baseURL."/addPenyakit":
+                $addGej = new GejalaController();
+                echo $addGej->addGejala();
+                // header('Location: admin');
+                break;            
+            case $baseURL."/tambahPenyakit":
                 require_once "Controller/penyakitController.php";
-                $peny = new PenyakitController();
-                echo $peny->addPenyakit();
-                header('Location: admin');
+                $addPeny = new PenyakitController();
+                echo $addPeny->addPenyakit();
+                //header('Location: admin');
                 break;
-            case $baseURL."/addKategori":
+            case $baseURL."/tambahKategori":
                 require_once "Controller/kategoriController.php";
                 $kat = new KategoriController();
                 echo $kat->addKategori();
-                header('Location: admin');
+                // header('Location: admin');
                 break;
             case $baseURL."/updateHubungan":
                 require_once "Controller/updateController.php";

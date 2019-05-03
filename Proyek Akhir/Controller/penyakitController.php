@@ -111,6 +111,10 @@
             $res = $this->db->executeNonSelectQuery($query);
         }
 
+        public function showPenyakit(){
+            return View::createAdmin('penyakit.php', []);
+        }
+
         public function add(){
             return View::createAdmin('addPenyakit.php', []);
         }

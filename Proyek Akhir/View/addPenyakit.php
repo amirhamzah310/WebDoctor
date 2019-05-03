@@ -1,7 +1,7 @@
 <fieldset>
     <legend>Tambah Penyakit</legend>
     <label>
-        <form action="addPenyakit" method="POST">
+        <form action="tambahPenyakit" method="POST">
         Nama Penyakit:
         <input type="text" name="namaPenyakit" id="namaPenyakit"> 
         <br><br>

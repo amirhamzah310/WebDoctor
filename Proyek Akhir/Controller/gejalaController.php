@@ -35,8 +35,12 @@
             $res = $this->db->executeNonSelectQUery($query);
         }
 
+        public function showGejala(){
+            return View::createAdmin('Gejalaa.php',[]); 
+        }
+
         public function add(){
-            return View::createAdmin('addGejala.php',[]); 
+            return View::createAdmin('addGejala.php', []);
         }
     }
 ?>
