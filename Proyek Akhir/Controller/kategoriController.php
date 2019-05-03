@@ -20,6 +20,10 @@
             $res = $this->db->executeNonSelectQuery($query);
         }
 
+        public function showKategori(){
+            return View::createAdmin('kategori.php', []);
+        }
+
         public function add(){
             return View::createAdmin('addKategori.php', []);
         }

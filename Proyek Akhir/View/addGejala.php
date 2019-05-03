@@ -1,9 +1,9 @@
 <fieldset>
     <legend>Tambah Gejala</legend>
     <label>
-        <form action="addGejala" method="POST">
+        <form action="tambahGejala" method="POST">
         Nama Gejala:
-        <input type="text" name="namaGejala" class="namaGejala" placeholder="Tidak boleh memakai spasi">
+        <input type="text" name="namaGejala" id="namaGejala" placeholder="Tidak boleh memakai spasi">
         <br><br>        
             
         <input type="submit" value="Submit">        

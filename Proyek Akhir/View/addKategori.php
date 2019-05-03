@@ -1,7 +1,7 @@
 <fieldset>
     <legend>Tambah Kategori</legend>
     <label>
-        <form action="addKategori" method="POST">
+        <form action="tambahKategori" method="post">
         Nama Kategori:
         <input type="text" name="namaKategori" id="namaKategori">
         <br><br>
