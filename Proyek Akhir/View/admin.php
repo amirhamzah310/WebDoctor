@@ -28,4 +28,21 @@
     ?>
     </table>
 </div>
+<div id="pagination">
+    <?php
+        $start = 0;
+        $show = 5;
+        $pageCount=$page / $show;
+        for ($key=0;$key<$pageCount;$key++) {
+            echo "<a href=?start=".($key*5)." id='page'>".($key+1)."</a>";
+            echo "&nbsp;";
+        }
+        // if(isset($_GET['start'])){
+        //     $start=$this->db->escapeString($_GET['start']);
+        // }
+        // $query .= " LIMIT $start, $show";
+        // print_r($query);
+        // $hasil = $this->db->executeSelectQuery($query);
+    ?>
+</div>
 <script src="View/Script/search.js"></script>

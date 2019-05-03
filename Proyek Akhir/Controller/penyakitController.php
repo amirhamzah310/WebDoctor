@@ -39,6 +39,7 @@
             }
             $query.=")AS `himpPenyakit` INNER JOIN `penyakit` ON `himpPenyakit`.`kodePenyakit` = `penyakit`.`kodePenyakit`";
             $result = $this->db->executeSelectQuery($query); //ambil nama penyakitnya, idKategorinya apa, sama kode penyakit dari semua inputan gejala bdskan kodeGejala
+            if(count($result)!=0){ //berarti ada 1 atau lebih nama penyakit yang ketemu
             $kode = $result[0][2];
             $z = "SELECT `username` FROM `member` WHERE `namaMember`='$nama'";
             $y = $this->db->executeSelectQuery($z); //untuk msukin ke tabel diagnosa
@@ -52,7 +53,7 @@
                 $q = "INSERT INTO `punya`(`waktu`,`username`,`kodeGejala`) VALUES('$tglJoin','$x',$a)";
                 $this->db->executeNonSelectQuery($q); //masukin setiap gejala yg dipilih
             }
-            if(count($res)!=0){ //berarti ada 1 atau lebih nama penyakit yang ketemu
+            
                 $a=$result; //ambil nama penyakitnya
                 $b=$result[0][1]; //ambil idKategorinya
                 $query = "SELECT `namaKategori` FROM `kategori` WHERE `idKategori`=$b";
@@ -68,11 +69,13 @@
             }
             else{
                 $a = "penyakit tidak ditemukan";
+                $b="";
                 return View::createHomepage('gejala1.php',[
                     "res"=>$res,
                     "profil"=>$profil,
                     "nama"=>$nama,
-                    "msg1"=>$a
+                    "msg1"=>$a,
+                    "msg2"=>$b
                 ]);
             }
         }
