@@ -24,7 +24,7 @@
             <span id="pembatas">|</span>
             <a href="viewKategori">Kategori</a>
             <span id="pembatas">|</span>
-            <a href="updateHubungan">Update</a>
+            <a href="viewUpdate">Update</a>
     </div>
     <div class="blok"></div>
     <div>        

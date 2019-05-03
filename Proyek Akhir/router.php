@@ -43,6 +43,12 @@
                 $kat = new KategoriController();
                 echo $kat->add();                
                 break;
+            case $baseURL."/viewUpdate":
+                require_once "Controller/updateController.php";
+                $log = new UpdateController();
+                echo $log->showUpdate();
+                break;
+
             case $baseURL."/logout":
                 require_once "Controller/loginController.php";
                 $out = new LoginController();
@@ -100,19 +106,19 @@
                 require_once "Controller/gejalaController.php";
                 $addGej = new GejalaController();
                 echo $addGej->addGejala();
-                // header('Location: admin');
+                header('Location: admin');
                 break;            
             case $baseURL."/tambahPenyakit":
                 require_once "Controller/penyakitController.php";
                 $addPeny = new PenyakitController();
                 echo $addPeny->addPenyakit();
-                //header('Location: admin');
+                header('Location: admin');
                 break;
             case $baseURL."/tambahKategori":
                 require_once "Controller/kategoriController.php";
-                $kat = new KategoriController();
-                echo $kat->addKategori();
-                // header('Location: admin');
+                $addKat = new KategoriController();
+                echo $addKat->addKategori();
+                header('Location: admin');
                 break;
             case $baseURL."/updateHubungan":
                 require_once "Controller/updateController.php";

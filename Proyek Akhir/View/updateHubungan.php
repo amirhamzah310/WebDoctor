@@ -1,13 +1,7 @@
-<div class="nav">        
-    <div class="menuKanan">
-        <a href="logout">Logout</a>
-    </div>
-</div>
-
 <fieldset>
     <legend>Update Hubungan</legend>
     <label>
-        <form action="updateHubungan" method="POST">
+        <form action="updateHubungan" method="post">
         Nama Gejala:
         <select name="gejala">
             <option>Pilih Gejala</option>

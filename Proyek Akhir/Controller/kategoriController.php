@@ -11,7 +11,7 @@
         }
 
         public function addKategori(){
-            $query = "INSERT INTO 'Kategori' ('namaKategori') VALUES";
+            $query = "INSERT INTO `Kategori` (`namaKategori`) VALUES";
             $temp = $_POST['namaKategori'];
             if(isset($temp) && $temp != ''){
                 $temp = $this->db->escapeString($temp);
