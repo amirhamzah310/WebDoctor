@@ -34,7 +34,7 @@
         $show = 5;
         $pageCount=$page / $show;
         for ($key=0;$key<$pageCount;$key++) {
-            echo "<a href=?start=".($key*5)." id='page'>".($key+1)."</a>";
+            echo "<a href=?start=".($key*5)." id='page[]'>".($key+1)."</a>";
             echo "&nbsp;";
         }
         // if(isset($_GET['start'])){
