@@ -36,7 +36,11 @@
         }
 
         public function showGejala(){
-            return View::createAdmin('Gejalaa.php',[]); 
+            $query = "SELECT * FROM `gejala`";
+            $res = $this->db->executeSelectQuery($query);
+            return View::createAdmin('Gejalaa.php',[
+                "res"=>$res
+            ]); 
         }
 
         public function add(){

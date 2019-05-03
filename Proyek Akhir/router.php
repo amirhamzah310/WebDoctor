@@ -105,19 +105,19 @@
                 require_once "Controller/gejalaController.php";
                 $addGej = new GejalaController();
                 echo $addGej->addGejala();
-                header('Location: admin');
+                header('Location: viewGejala');
                 break;            
             case $baseURL."/tambahPenyakit":
                 require_once "Controller/penyakitController.php";
                 $addPeny = new PenyakitController();
                 echo $addPeny->addPenyakit();
-                header('Location: admin');
+                header('Location: viewPenyakit');
                 break;
             case $baseURL."/tambahKategori":
                 require_once "Controller/kategoriController.php";
                 $addKat = new KategoriController();
                 echo $addKat->addKategori();
-                header('Location: admin');
+                header('Location: viewKategori');
                 break;
             case $baseURL."/updateHubungan":
                 require_once "Controller/updateController.php";

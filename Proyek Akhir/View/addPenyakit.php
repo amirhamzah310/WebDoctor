@@ -7,10 +7,10 @@
         <br><br>
         
         Kategori Penyakit:
-        <select>       
+        <select name="kateg">       
             <option>Pilih Kategori</option>
             <?php
-                foreach($res AS $key => $value){
+                foreach($res as $key => $value){
                     echo '<option>';
                     echo $value[0];
                     echo '</option>';

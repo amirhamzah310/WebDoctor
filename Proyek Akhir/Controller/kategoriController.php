@@ -21,7 +21,11 @@
         }
 
         public function showKategori(){
-            return View::createAdmin('kategori.php', []);
+            $query = "SELECT * FROM `kategori`";
+            $res = $this->db->executeSelectQuery($query);
+            return View::createAdmin('kategori.php', [
+                "res"=>$res
+            ]);
         }
 
         public function add(){
