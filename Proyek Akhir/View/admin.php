@@ -36,3 +36,4 @@
         }
     ?>
 </div>
+<script src="View/Script/search.js"></script>
