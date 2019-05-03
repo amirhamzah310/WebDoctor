@@ -12,7 +12,7 @@
             $resGejala = $this->db->executeSelectQuery($query1);
             $query2 = "SELECT namaPenyakit FROM Penyakit";
             $resPenyakit = $this->db->executeSelectQuery($query2);
-            return View::createView('updateHubungan.php',[
+            return View::createAdmin('updateHubungan.php',[
                 "resGejala"=> $resGejala,
                 "resPenyakit"=> $resPenyakit
             ]);
