@@ -102,18 +102,19 @@
         }
 
         public function addPenyakit(){ //menambahkan penyakit ke db
-            $query = "INSERT INTO `Penyakit` (`namaPenyakit`, `idKategori`) VALUES";
+            $query = "INSERT INTO `penyakit` (`namaPenyakit`, `idKategori`) VALUES";
             $temp = $_POST['namaPenyakit'];
-            $kateg = $_POST['kateg'];            
+            $kateg = $_POST['kateg'];
             $q = "SELECT `idKategori` FROM `kategori` WHERE `namaKategori` = '$kateg'";
             $result = $this->db->executeSelectQuery($q);
-            // print_r($result);
+            print_r($result);
             if(isset($temp) && $temp != '') {
                 $temp1 = $this->db->escapeString($temp);
-                $temp2 = $result[0][0];                
+                $temp2 = $result[0][0];
                 $query.= "('$temp1', $temp2);";
             }
-            $res = $this->db->executeNonSelectQuery($query);
+            print_r($query);
+            $this->db->executeNonSelectQuery($query);
         }
 
         public function showPenyakit(){
@@ -130,6 +131,14 @@
             return View::createAdmin('addPenyakit.php', [
                 "res"=>$res
             ]);
+        }
+
+        public function delete(){
+            $kd = $_GET['id'];
+            $query = "DELETE FROM `hubungan` WHERE `kodePenyakit`=$kd";
+            $this->db->executeNonSelectQuery($query);
+            $query = "DELETE FROM `penyakit` WHERE `kodePenyakit`=$kd";
+            $this->db->executeNonSelectQuery($query);
         }
     }   
 ?>

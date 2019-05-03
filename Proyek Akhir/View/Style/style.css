@@ -628,3 +628,12 @@ input#search {
     background-color: teal;
     color: white;
 }
+
+#del {
+    text-decoration: none;
+    color: #666;
+}
+
+#del:hover {
+    color: red;
+}

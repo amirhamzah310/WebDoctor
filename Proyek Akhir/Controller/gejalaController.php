@@ -46,5 +46,13 @@
         public function add(){
             return View::createAdmin('addGejala.php', []);
         }
+
+        public function delete(){
+            $kd = $_GET['id'];
+            $query = "DELETE FROM `hubungan` WHERE `kodeGejala`=$kd";
+            $this->db->executeNonSelectQuery($query);
+            $query = "DELETE FROM `gejala` WHERE `kodeGejala`=$kd";
+            $this->db->executeNonSelectQuery($query);
+        }
     }
 ?>

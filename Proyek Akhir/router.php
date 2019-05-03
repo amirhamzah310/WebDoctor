@@ -3,6 +3,24 @@
     $baseURL = '/WebDoctor/Proyek Akhir';
     if($_SERVER['REQUEST_METHOD']=="GET"){
         switch ($url) {
+            case $baseURL."/deleteKategori":
+                require_once "Controller/kategoriController.php";
+                $del = new KategoriController();
+                echo $del->delete();
+                header('Location: viewKategori');
+                break;
+            case $baseURL."/deleteGejala":
+                require_once "Controller/gejalaController.php";
+                $del = new GejalaController();
+                echo $del->delete();
+                header('Location: viewGejala');
+                break;
+            case $baseURL."/deletePenyakit":
+                require_once "Controller/penyakitController.php";
+                $del = new PenyakitController();
+                echo $del->delete();
+                header('Location: viewPenyakit');
+                break; 
             case $baseURL."/diagnosa":
                 require_once "Controller/penyakitController.php";
                 $sakit = new PenyakitController();
@@ -126,7 +144,7 @@
                 require_once "Controller/updateController.php";
                 $update = new UpdateController();
                 echo $update->showUpdate();
-                header('Location: admin');
+                // header('Location: admin');
                 break;
             case $baseURL."/deleteAkun":
                 require_once "Controller/loginController.php";

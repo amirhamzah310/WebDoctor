@@ -31,5 +31,15 @@
         public function add(){
             return View::createAdmin('addKategori.php', []);
         }
+
+        public function delete(){
+            $kd = $_GET['id'];
+            $query = "DELETE FROM `hubungan` WHERE `kodePenyakit`=$kd";
+            $this->db->executeNonSelectQuery($query);
+            $query = "DELETE FROM `penyakit` WHERE `idKategori`=$kd";
+            $this->db->executeNonSelectQuery($query);
+            $query = "DELETE FROM `kategori` WHERE `idKategori`=$kd";
+            $this->db->executeNonSelectQuery($query);
+        }
     }
 ?>

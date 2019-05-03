@@ -27,8 +27,8 @@
             ?>
         </select>
         <br><br>
-        
-        <input type="submit" value="Submit">
+        <input type="Submit" name="submit" value="Tambah"/>
+        <!-- <input type="Submit" name="submit" value="Hapus"/> -->
         </form>
     </label>
 </fieldset>

@@ -27,12 +27,14 @@
             $penyakit = $this->db->executeSelectQuery($q2);
             $gejala = $gejala[0][0];
             $penyakit = $penyakit[0][0];
-            $query = "INSERT INTO `hubungan` VALUES ($penyakit,$gejala);";
-            $res = $this->db->executeNonSelectQuery($query);
-            return View::createAdmin('updateHubungan.php', [
-                "resGejala"=>$gejala,
-                "resPenyakit"=>$penyakit
-            ]);
+            if($_POST['Submit']=='Tambah'){
+                $query = "INSERT INTO `hubungan` VALUES ($penyakit,$gejala);";
+                $this->db->executeNonSelectQuery($query);
+            }
+            else if($_POST['hapus']=='Hapus'){
+                $query = "DELETE FROM `hubungan` WHERE `kodePenyakit`=$penyakit AND `kodeGejala`=$gejala);";
+                $this->db->executeNonSelectQuery($query);
+            }
         }       
     }
 ?>

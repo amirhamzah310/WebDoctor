@@ -5,12 +5,14 @@
     <tr>
         <th>Kode Kategori</th>
         <th>Nama Kategori</th>
+        <th>Aksi</th>
     </tr>
     <?php
         foreach($res as $key=>$value){
             echo "<tr>";
             echo "<td>".$value[0]."</td>";
             echo "<td>".$value[1]."</td>";
+            echo "<td><a href='deleteKategori?id=".$value[0]."' id='del'><i class='fas fa-trash-alt'></i>Hapus</a></td>";
             echo "</tr>";
         }
     ?>

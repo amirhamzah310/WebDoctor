@@ -5,7 +5,8 @@
     <tr>
         <th>Kode Penyakit</th>
         <th>Nama Penyakit</th>
-        <th>ID Kategori</th>        
+        <th>ID Kategori</th>
+        <th>Aksi</th>
     </tr>
     <?php
             foreach($res as $key=>$value){
@@ -13,6 +14,7 @@
                 echo "<td>".$value[0]."</td>";
                 echo "<td>".$value[1]."</td>";
                 echo "<td>".$value[2]."</td>";
+                echo "<td><a href='deletePenyakit?id=".$value[0]."' id='del'><i class='fas fa-trash-alt'></i>Hapus</a></td>";
                 echo "</tr>";
             }
     ?>
