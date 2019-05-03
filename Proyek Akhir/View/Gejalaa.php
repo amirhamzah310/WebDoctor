@@ -1,3 +1,6 @@
+<div class="header">
+    <h1 class="judul">Daftar Gejala</h1>
+</div>
 <table>
     <tr>        
         <th>Kode Gejala</th>

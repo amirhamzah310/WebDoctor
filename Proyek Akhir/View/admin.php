@@ -36,4 +36,9 @@
         }
     ?>
 </div>
+<div>
+    <form action="createpdf" method="post">
+        <input type="submit" value="Print" id="print">
+    </form>
+</div>
 <script src="View/Script/search.js"></script>

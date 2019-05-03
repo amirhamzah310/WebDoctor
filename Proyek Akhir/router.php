@@ -101,6 +101,9 @@
     }
     else if($_SERVER['REQUEST_METHOD']=="POST"){
         switch ($url) {
+            case $baseURL. "/createpdf":
+                require_once "Controller/pdf/dompdf.php";
+                break;
             case $baseURL."/tambahGejala":
                 require_once "Controller/gejalaController.php";
                 $addGej = new GejalaController();

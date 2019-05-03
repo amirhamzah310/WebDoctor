@@ -181,7 +181,7 @@ input.nama,
 input.alamat,
 input.email,
 input#pass,
-input#repass{
+input#repass {
     border: 1px solid #ccc;
     border-radius: 10px;
     width: 30%;
@@ -315,11 +315,11 @@ select#selectKota {
     margin-top: 5px;
 }
 
+#print,
 #btnKembali,
 #btnTambah,
 #sign_in,
-#btnMulai
-{
+#btnMulai {
     margin: auto;
     margin-top: 20px;
     display: block;
