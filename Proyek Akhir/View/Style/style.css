@@ -316,8 +316,10 @@ select#selectKota {
 }
 
 #btnKembali,
+#btnTambah,
 #sign_in,
-#btnMulai {
+#btnMulai
+{
     margin: auto;
     margin-top: 20px;
     display: block;
