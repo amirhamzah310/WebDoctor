@@ -9,7 +9,7 @@
         }
 
         public function start(){
-            $query = "SELECT diagnosa.waktu AS Tanggal, penyakit.namaPenyakit AS Penyakit, kategori.namaKategori AS Kategori, gejala.namaGejala AS Gejala FROM diagnosa INNER JOIN penyakit ON diagnosa.kodePenyakit = penyakit.kodePenyakit INNER JOIN kategori ON penyakit.idKategori = kategori.idKategori INNER JOIN hubungan ON penyakit.kodePenyakit = hubungan.kodePenyakit INNER JOIN gejala ON hubungan.kodeGejala = gejala.kodeGejala";
+            $query = "SELECT DISTINCT(`diagnosa`.`waktu`) AS Tanggal, penyakit.namaPenyakit AS Penyakit, kategori.namaKategori AS Kategori, gejala.namaGejala AS Gejala FROM diagnosa INNER JOIN penyakit ON diagnosa.kodePenyakit = penyakit.kodePenyakit INNER JOIN kategori ON penyakit.idKategori = kategori.idKategori INNER JOIN hubungan ON penyakit.kodePenyakit = hubungan.kodePenyakit INNER JOIN gejala ON hubungan.kodeGejala = gejala.kodeGejala";
             $res = $this->db->executeSelectQuery($query);
             session_start();
             $nama=$_SESSION['userlogin'];

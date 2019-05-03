@@ -11,9 +11,11 @@
         }
 
         public function start(){            
-            $query = "SELECT `kodePenyakit` AS 'Kode Penyakit', `namaPenyakit` AS 'Nama Penyakit', `kodeGejala` AS 'Kode Gejala', `namaGejala` AS 'Nama Gejala', `idKategori` AS 'Kode Kategori', `namaKategori` AS 'Nama Kategori' FROM `penyakit` INNER JOIN `hubungan` ON `penyakit.kodePenyakit` = `hubungan.kodePenyakit` INNER JOIN `gejala` ON `hubungan.kodeGejala` = `gejala.kodeGejala` INNER JOIN `kategori` ON `penyakit.idKategori` = `kategori.idKategori`";
+            $query = "SELECT `penyakit`.`kodePenyakit`,`namaPenyakit`,`gejala`.`kodeGejala`,`namaGejala`,`kategori`.`idKategori`,`namaKategori` FROM `penyakit` INNER JOIN `hubungan` ON `penyakit`.`kodePenyakit` = `hubungan`.`kodePenyakit` INNER JOIN `gejala` ON `hubungan`.`kodeGejala` = `gejala`.`kodeGejala` INNER JOIN `kategori` ON `penyakit`.`idKategori` = `kategori`.`idKategori`";
             $res = $this->db->executeSelectQuery($query);
-            return View::createAdmin('admin.php', []);
+            return View::createAdmin('admin.php', [
+                "res"=>$res
+            ]);
         }        
     }
 ?>

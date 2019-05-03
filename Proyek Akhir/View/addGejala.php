@@ -3,20 +3,7 @@
     <label>
         <form action="addGejala" method="POST">
         Nama Gejala:
-        <input type="text" name="namaGejala" id="namaGejala">        
-        <br><br>
-
-        Kategori Gejala:
-        <select>       
-            <option>Pilih Kategori</option>
-            <?php
-                foreach($res AS $key => $value){
-                    echo '<option>';
-                    echo $value[0];
-                    echo '</option>';
-                }
-            ?>
-        </select>
+        <input type="text" name="namaGejala" class="namaGejala" placeholder="Tidak boleh memakai spasi">
         <br><br>        
             
         <input type="submit" value="Submit">        

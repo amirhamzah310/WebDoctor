@@ -49,7 +49,6 @@ dd,
 ol,
 ul,
 li,
-fieldset,
 form,
 label,
 legend,
@@ -182,7 +181,8 @@ input.nama,
 input.alamat,
 input.email,
 input#pass,
-input#repass {
+input#repass,
+input.namaGejala {
     border: 1px solid #ccc;
     border-radius: 10px;
     width: 30%;
@@ -338,7 +338,6 @@ select#selectKota {
     z-index: 9999999px;
 }
 
-.pilihanMenu,
 .menuKiri {
     position: absolute;
     top: 0;
@@ -395,12 +394,19 @@ option {
 }
 
 /*pilihan menu pada halaman utama admin*/
-.pilihanMenu a {
-    text-decoration: none;
-    padding: 15px;
+.menu {
+    position: absolute;
+    top: 15px;
+    left: 10px;
 }
 
-.pilihanMenu a:hover {
+.menu a {
+    text-decoration: none;
+    padding: 15px;
+
+}
+
+.menu a:hover {
     color: white;
 }
 
@@ -550,4 +556,42 @@ p#konten {
 #pilih a {
     color: white;
     text-decoration: none;
+}
+
+table {
+    border: 1px double #666;
+    border-collapse: collapse;
+    margin: auto;
+}
+
+td,
+tr {
+    border: 2px double #666;
+    padding: 4px;
+}
+
+th {
+    padding: 4px;
+    border: 1px double #ccc;
+    text-align: center;
+    background: teal;
+    color: white;
+}
+
+fieldset {
+    display: block;
+    margin-top: 1%;
+    margin-left: 25%;
+    margin-right: 25%;
+    padding: 1em;
+    border: 2px solid #35d5cf;
+}
+
+#legend {
+    float: left;
+    width: 25%;
+    margin-right: 0.5em;
+    padding-top: 0.2em;
+    text-align: right;
+    font-weight: bold;
 }

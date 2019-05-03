@@ -15,8 +15,8 @@
             <a href="logout">Logout</a>
         </div>
     </div>    
-    <div class="pilihanMenu">
-            <a href="">All</a>
+    <div class="menu">
+            <a href="admin">All</a>
             <span id="pembatas">|</span>
             <a href="viewPenyakit">Penyakit</a>
             <span id="pembatas">|</span>

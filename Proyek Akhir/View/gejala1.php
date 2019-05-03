@@ -19,7 +19,14 @@
             echo "$msg1";
         }
         else{
-            echo "$msg1 dengan kategori $msg2";
+            $i=0;
+            foreach ($msg1 as $key => $value) {
+                if($i!=0){
+                    echo "Beberapa penyakit lain yang mungkin Anda alami: <br>";
+                }
+                echo "$value[0] dengan kategori $msg2 <br>";
+                $i++;
+            }
         }
     ?>
 </div>
