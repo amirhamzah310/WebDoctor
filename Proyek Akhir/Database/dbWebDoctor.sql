@@ -83,5 +83,5 @@ VALUES(1, 'Pencernaan'),(2, 'Pernapasan'),(3, 'Malnutrisi'),(4, 'Tumor');
 INSERT INTO `gejala` (`kodeGejala`, `namaGejala`)
 VALUES(1, 'Mual'),(2, 'Muntah'),(3, 'Demam'),(4, 'Batuk'),(5, 'Pusing'),(6, 'Menggigil'),(7, 'Lemas'),(8, 'Sesak Napas'),(9, 'Berkeringat');
 
-INSERT INTO `penyakit` (`kodePenyakit`, `namaPenyakit`, `idKategori`) 
+INSERT INTO `penyakit` (`kodePenyakit`, `namaPenyakit`, `idKategori`)
 VALUES(1, 'Diare', 1),(2, 'Influenza', 2),(3, 'Anemia', 3),(4, 'Tumor', 4);

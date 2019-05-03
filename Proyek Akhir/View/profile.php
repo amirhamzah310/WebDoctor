@@ -22,7 +22,7 @@
         Kota : <?=$res[0][3]?><br>
         Alamat : <?=$res[0][4]?><br>
         Email : <?=$res[0][5]?><br>
-        Tanggal Bergabung : <?=$res[0][9]?>
+        Tanggal Bergabung : <?=$res[0][9]?><br><br><br>
     </div>
 </div>
 <div class="delete">

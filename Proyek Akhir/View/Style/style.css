@@ -595,3 +595,16 @@ fieldset {
     text-align: right;
     font-weight: bold;
 }
+
+input#search {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 500px;
+    height: 25px;
+    box-shadow: 2px 2px 3px #666;
+    font-size: 15px;
+    outline: 0;
+    margin: auto;
+    display: block;
+    text-align: center;
+}
