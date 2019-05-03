@@ -76,3 +76,12 @@ VALUES(1, 'Bali'), (2, 'Bandung'), (3, 'Jakarta'), (4, 'Semarang'), (5, 'Yogyaka
 
 INSERT INTO Member
 VALUES('admin', 'Admin WebDoctor', '1999-05-30', 'Bandung', 'Bukit Jarian 14A', 'invers273@gmail.com', 'BE6BD7A784BB6A2130E13C2EA09014C4', 1, 'no-profile.jpg','2019-04-30');
+
+INSERT INTO `kategori` (`idKategori`, `namaKategori`) 
+VALUES(1, 'Pencernaan'),(2, 'Pernapasan'),(3, 'Malnutrisi'),(4, 'Tumor');
+
+INSERT INTO `gejala` (`kodeGejala`, `namaGejala`)
+VALUES(1, 'Mual'),(2, 'Muntah'),(3, 'Demam'),(4, 'Batuk'),(5, 'Pusing'),(6, 'Menggigil'),(7, 'Lemas'),(8, 'Sesak Napas'),(9, 'Berkeringat');
+
+INSERT INTO `penyakit` (`kodePenyakit`, `namaPenyakit`, `idKategori`)
+VALUES(1, 'Diare', 1),(2, 'Influenza', 2),(3, 'Anemia', 3),(4, 'Tumor', 4);

@@ -1,17 +1,19 @@
 <div class="header">
     <h1 class="judul">Daftar Penyakit Gejala Kategori</h1>
 </div>
-<table>
-    <tr>
-        <th>No</th>
-        <th>Kode Penyakit</th>
-        <th>Nama Penyakit</th>
-        <th>Kode Gejala</th>
-        <th>Nama Gejala</th>
-        <th>Kode Kategori</th>
-        <th>Nama Kategori</th>
-    </tr>
-    <?php
+<input type="text" name="search" id="search" placeholder="Masukkan kata kunci pencarian"><br><br>
+<div id="isi">
+    <table>
+        <tr>
+            <th>No</th>
+            <th>Kode Penyakit</th>
+            <th>Nama Penyakit</th>
+            <th>Kode Gejala</th>
+            <th>Nama Gejala</th>
+            <th>Kode Kategori</th>
+            <th>Nama Kategori</th>
+        </tr>
+        <?php
         foreach ($res as $key => $value) {
             echo "<tr>";
             echo "<td>".($key+1)."</td>";
@@ -24,5 +26,6 @@
             echo "</tr>";
         }
     ?>
-</table>
+    </table>
 </div>
+<script src="View/Script/search.js"></script>
