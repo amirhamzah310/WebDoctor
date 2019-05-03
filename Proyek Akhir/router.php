@@ -48,7 +48,6 @@
                 $log = new UpdateController();
                 echo $log->showUpdate();
                 break;
-
             case $baseURL."/logout":
                 require_once "Controller/loginController.php";
                 $out = new LoginController();
