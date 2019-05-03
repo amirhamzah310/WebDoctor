@@ -46,7 +46,7 @@
             case $baseURL."/viewUpdate":
                 require_once "Controller/updateController.php";
                 $log = new UpdateController();
-                echo $log->showUpdate();
+                echo $log->start();
                 break;
             case $baseURL."/logout":
                 require_once "Controller/loginController.php";
@@ -122,7 +122,7 @@
             case $baseURL."/updateHubungan":
                 require_once "Controller/updateController.php";
                 $update = new UpdateController();
-                echo $update->updateHubungan();
+                echo $update->showUpdate();
                 header('Location: admin');
                 break;
             case $baseURL."/deleteAkun":
