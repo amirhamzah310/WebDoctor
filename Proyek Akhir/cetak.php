@@ -1,18 +1,20 @@
 <?php
 
     require_once __DIR__ . '/vendor/autoload.php';
-    include 'main.php';
+
+    // require_once "mysqlDB.php";
+    // $query = "SELECT `kodePenyakit`, `namaPenyakit`, `kodeGejala`, `namaGejala`, `idKategori`, `namaKategori` FROM `penyakit` INNER JOIN `hubungan` ON `penyakit`.`kodePenyakit` = `hubungan.kodePenyakit` INNER JOIN `gejala` ON `hubungan`.`kodeGejala` = `gejala`.`kodeGejala` INNER JOIN `kategori` ON `penyakit`.`idKategori` = `kategori`.`idKategori`";
+    // $res = $this->db->executeSelectQuery($query);
 
     $mpdf = new \Mpdf\Mpdf();
-    $html = '
+    $html = '    
     <html>
     <head>
         <link rel="stylesheet" href="View/Style/style.css">        
     </head>
-    <body>
-    <div class="header">
-        <h1 class="judul">Daftar Penyakit Gejala Kategori</h1>
-    </div>
+    <body> 
+    <h1 class="judul">Daftar Penyakit Gejala Kategori</h1>
+    <br>
     <table>
     <tr>
         <th>No</th>
@@ -22,36 +24,12 @@
         <th>Nama Gejala</th>
         <th>Kode Kategori</th>
         <th>Nama Kategori</th>
-    </tr>';
-    foreach ($res as $key => $value) {
-        $html.= '<tr>';
-        $html.= '<td>';
-        $html.= ($key+1);
-        $html.= '</td>';
-        $html.= '<td>';
-        $html.= $value[0];
-        $html.= '</td>';
-        $html.= '<td>';
-        $html.= $value[1];
-        $html.= '</td>';
-        $html.= '<td>';
-        $html.= $value[2];
-        $html.= '</td>';
-        $html.= '<td>';
-        $html.= $value[3];
-        $html.= '</td>';
-        $html.= '<td>';
-        $html.= $value[4];
-        $html.= '</td>';
-        $html.= '<td>';
-        $html.= $value[5];
-        $html.= '</td>';
-        $html.= '</tr>';
-    }
-    $html.='</table>';
-    $html.='</body>';
-    $html.='</html>';
-    echo $html;
+    </tr>';   
+
+    $html .= '</table>';
+
+
+
     $mpdf->WriteHTML($html);
     $mpdf->Output('daftar.pdf',\Mpdf\Output\Destination::INLINE);
 ?>
