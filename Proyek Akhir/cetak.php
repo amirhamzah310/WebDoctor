@@ -14,6 +14,7 @@
     </head>
     <body> 
     <h1 class="judul">Daftar Penyakit Gejala Kategori</h1>
+    <br>
     <table>
     <tr>
         <th>No</th>
@@ -23,8 +24,7 @@
         <th>Nama Gejala</th>
         <th>Kode Kategori</th>
         <th>Nama Kategori</th>
-    </tr>';
-    
+    </tr>';   
 
     $html .= '</table>';
 
