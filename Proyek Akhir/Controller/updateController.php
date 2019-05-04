@@ -27,7 +27,7 @@
             $penyakit = $this->db->executeSelectQuery($q2);
             $gejala = $gejala[0][0];
             $penyakit = $penyakit[0][0];
-            if($_POST['Submit']=='Tambah'){
+            if($_POST['submit']=='Tambah'){
                 $query = "INSERT INTO `hubungan` VALUES ($penyakit,$gejala);";
                 $this->db->executeNonSelectQuery($query);
             }

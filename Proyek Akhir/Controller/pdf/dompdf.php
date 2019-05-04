@@ -1,6 +1,20 @@
 <?php
 
-require_once 'dompdf/autoload.inc.php';
+    require_once __DIR__ . '../../vendor/autoload.php';
+
+    require_once "mysqlDB.php";
+    $query = "SELECT `kodePenyakit`, `namaPenyakit`, `kodeGejala`, `namaGejala`, `idKategori`, `namaKategori` FROM `penyakit` INNER JOIN `hubungan` ON `penyakit`.`kodePenyakit` = `hubungan.kodePenyakit` INNER JOIN `gejala` ON `hubungan`.`kodeGejala` = `gejala`.`kodeGejala` INNER JOIN `kategori` ON `penyakit`.`idKategori` = `kategori`.`idKategori`";
+    $res = $this->db->executeSelectQuery($query);
+
+    $mpdf = new \Mpdf\Mpdf();
+    $mpdf->WriteHTML('
+          <p>TESSSSSS</p>
+    ');
+    $mpdf->Output();
+
+?>
+
+<!-- require_once 'dompdf/autoload.inc.php';
 require_once 'Controller/mysqlDB.php';
 $db = new mysqlDB("localhost","root","","webdoctor");
 use Dompdf\Dompdf;
@@ -60,4 +74,4 @@ $dompdf->render();
 $dompdf->stream();
 
 
-?>
+?> -->

@@ -144,7 +144,7 @@
                 require_once "Controller/updateController.php";
                 $update = new UpdateController();
                 echo $update->showUpdate();
-                // header('Location: admin');
+                header('Location: admin');
                 break;
             case $baseURL."/deleteAkun":
                 require_once "Controller/loginController.php";
