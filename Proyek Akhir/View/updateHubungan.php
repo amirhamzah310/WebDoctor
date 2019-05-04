@@ -14,7 +14,6 @@
             ?>
         </select>
         <br><br>
-
         Nama Penyakit:
         <select name="penyakit">
             <option>Pilih Penyakit</option>
@@ -28,7 +27,6 @@
         </select>
         <br><br>
         <input type="Submit" name="submit" value="Tambah"/>
-        <!-- <input type="Submit" name="submit" value="Hapus"/> -->
         </form>
     </label>
 </fieldset>
