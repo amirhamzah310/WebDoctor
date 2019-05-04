@@ -4,7 +4,7 @@
     include "main.php";
 
     $mpdf = new \Mpdf\Mpdf();
-    $html = '    
+    $html = '
     <html>
     <head>
         <link rel="stylesheet" href="View/Style/style.css">        
@@ -49,6 +49,7 @@
     $html.="</table>";
     $html.="</body>";
     $html.="</html>";
-    $mpdf->WriteHTML($html);
-    $mpdf->Output();
+    echo $html;
+    // $mpdf->WriteHTML($html);
+    // $mpdf->Output();
 ?>
