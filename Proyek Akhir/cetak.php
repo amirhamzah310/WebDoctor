@@ -2,9 +2,10 @@
 
     require_once __DIR__ . '/vendor/autoload.php';
 
-    // require_once "mysqlDB.php";
-    // $query = "SELECT `kodePenyakit`, `namaPenyakit`, `kodeGejala`, `namaGejala`, `idKategori`, `namaKategori` FROM `penyakit` INNER JOIN `hubungan` ON `penyakit`.`kodePenyakit` = `hubungan.kodePenyakit` INNER JOIN `gejala` ON `hubungan`.`kodeGejala` = `gejala`.`kodeGejala` INNER JOIN `kategori` ON `penyakit`.`idKategori` = `kategori`.`idKategori`";
-    // $res = $this->db->executeSelectQuery($query);
+    require_once "Controller/mysqlDB.php";
+    $db=new mysqlDB("localhost","root","","webdoctor");
+    $query = "SELECT `penyakit`.`kodePenyakit`, `namaPenyakit`, `gejala`.`kodeGejala`, `namaGejala`, `kategori`.`idKategori`, `namaKategori` FROM `penyakit` INNER JOIN `hubungan` ON `penyakit`.`kodePenyakit` = `hubungan`.`kodePenyakit` INNER JOIN `gejala` ON `hubungan`.`kodeGejala` = `gejala`.`kodeGejala` INNER JOIN `kategori` ON `penyakit`.`idKategori` = `kategori`.`idKategori`";
+    $res = $db->executeSelectQuery($query);
 
     $mpdf = new \Mpdf\Mpdf();
     $html = '    
@@ -25,11 +26,34 @@
         <th>Kode Kategori</th>
         <th>Nama Kategori</th>
     </tr>';   
-
-    $html .= '</table>';
-
-
-
+    foreach ($res as $key => $value) {
+        $html.= '<tr>';
+        $html.= '<td>';
+        $html.= ($key+1);
+        $html.= '</td>';
+        $html.= '<td>';
+        $html.= $value[0];
+        $html.= '</td>';
+        $html.= '<td>';
+        $html.= $value[1];
+        $html.= '</td>';
+        $html.= '<td>';
+        $html.= $value[2];
+        $html.= '</td>';
+        $html.= '<td>';
+        $html.= $value[3];
+        $html.= '</td>';
+        $html.= '<td>';
+        $html.= $value[4];
+        $html.= '</td>';
+        $html.= '<td>';
+        $html.= $value[5];
+        $html.= '</td>';
+        $html.= '</tr>';
+    }
+    $html.='</table>';
+    $html.='</body>';
+    $html.='</html>';
     $mpdf->WriteHTML($html);
     $mpdf->Output('daftar.pdf',\Mpdf\Output\Destination::INLINE);
 ?>
