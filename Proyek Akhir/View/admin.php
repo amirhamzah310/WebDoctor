@@ -37,7 +37,7 @@
     ?>
 </div>
 <div>
-    <form action="cetak.php" method="post">
+    <form action="cetak.php" method="post" target="_blank">
         <input type="submit" value="Print" id="print">
     </form>
 </div>

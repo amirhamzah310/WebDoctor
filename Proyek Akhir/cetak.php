@@ -53,5 +53,5 @@
     $html.='</html>';
     echo $html;
     $mpdf->WriteHTML($html);
-    $mpdf->Output();
+    $mpdf->Output('daftar.pdf',\Mpdf\Output\Destination::INLINE);
 ?>
