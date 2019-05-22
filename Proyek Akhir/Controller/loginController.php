@@ -71,6 +71,13 @@
         public function deleteAkun(){
             session_start();
             $nama = $_SESSION['userlogin'];
+            $query = "SELECT `username` FROM `member` WHERE `namaMember`='$nama'";
+            $usr = $this->db->executeSelectQuery($query);
+            $usr = $usr[0][0];
+            $query = "DELETE FROM `diagnosa` WHERE `username` = '$usr'";
+            $this->db->executeSelectQuery($query);
+            $query = "DELETE FROM `punya` WHERE `username` = '$usr'";
+            $this->db->executeSelectQuery($query);
             $query = "DELETE FROM `member` WHERE `namaMember` = '$nama'";
             $this->db->executeNonSelectQuery($query);
             unset($_SESSION['userlogin']);

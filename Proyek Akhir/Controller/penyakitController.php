@@ -40,19 +40,19 @@
             $query.=")AS `himpPenyakit` INNER JOIN `penyakit` ON `himpPenyakit`.`kodePenyakit` = `penyakit`.`kodePenyakit`";
             $result = $this->db->executeSelectQuery($query); //ambil nama penyakitnya, idKategorinya apa, sama kode penyakit dari semua inputan gejala bdskan kodeGejala
             if(count($result)!=0){ //berarti ada 1 atau lebih nama penyakit yang ketemu
-            $kode = $result[0][2];
-            $z = "SELECT `username` FROM `member` WHERE `namaMember`='$nama'";
-            $y = $this->db->executeSelectQuery($z); //untuk msukin ke tabel diagnosa
-            $x = $y[0][0];
-            $dt = new DateTime();
-            $tglJoin = $dt->format('Ymd'); //kapan terkena penyakitnya
-            $q = "INSERT INTO `diagnosa`(`waktu`,`kodePenyakit`,`username`) VALUES ('$tglJoin',$kode,'$x')";
-            $this->db->executeNonSelectQuery($q);
-            for($i=0; $i<$jumlah; $i++){
-                $a = $gejala[$i][0];
-                $q = "INSERT INTO `punya`(`waktu`,`username`,`kodeGejala`) VALUES('$tglJoin','$x',$a)";
-                $this->db->executeNonSelectQuery($q); //masukin setiap gejala yg dipilih
-            }
+                $kode = $result[0][2];
+                $z = "SELECT `username` FROM `member` WHERE `namaMember`='$nama'";
+                $y = $this->db->executeSelectQuery($z); //untuk msukin ke tabel diagnosa
+                $x = $y[0][0];
+                $dt = new DateTime();
+                $tglJoin = $dt->format('Ymd'); //kapan terkena penyakitnya
+                $q = "INSERT INTO `diagnosa`(`waktu`,`kodePenyakit`,`username`) VALUES ('$tglJoin',$kode,'$x')";
+                $this->db->executeNonSelectQuery($q);
+                for($i=0; $i<$jumlah; $i++){
+                    $a = $gejala[$i][0];
+                    $q = "INSERT INTO `punya`(`waktu`,`username`,`kodeGejala`) VALUES('$tglJoin','$x',$a)";
+                    $this->db->executeNonSelectQuery($q); //masukin setiap gejala yg dipilih
+                }
             
                 $a=$result; //ambil nama penyakitnya
                 $b=$result[0][1]; //ambil idKategorinya
@@ -78,27 +78,6 @@
                     "msg2"=>$b
                 ]);
             }
-        }
-    
-        public function show(){ 
-            $query = "SELECT `namaPenyakit` FROM `Penyakit` WHERE `kategori`= ";
-            $res = $this->db->executeSelectQuery($query);
-            if(count($res)!=0){
-                echo $res[0];
-            }
-            else{
-                echo "penyakit tidak ditemukan";
-            }
-            session_start();
-            $nama = $_SESSION['userlogin'];
-            session_write_close();
-            $query = "SELECT `profil` FROM `member` WHERE `namaMember`='$nama'";
-            $profil = $this->db->executeSelectQuery($query);
-            return View::createHomepage('penyakit.php', [
-                "nama"=>$nama,
-                "res"=>$res,
-                "profil"=>$profil
-            ]);
         }
 
         public function addPenyakit(){ //menambahkan penyakit ke db
