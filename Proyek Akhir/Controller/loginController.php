@@ -1,6 +1,6 @@
 <?php
-    include "model/login.php";
-    require_once "view/view.php";
+    // include "model/login.php";
+    require_once "View/view.php";
     require_once "mysqlDB.php";
     class LoginController{
         protected $db;

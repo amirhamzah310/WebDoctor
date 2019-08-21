@@ -1,6 +1,6 @@
 <?php
-    include "model/login.php";
-    require_once "view/view.php";
+    // include "model/login.php";
+    require_once "View/view.php";
     require_once "mysqlDB.php";
     class SignUpController{
         protected $db;
@@ -12,7 +12,7 @@
         public function sign(){
             $tanggal=31;
             $bulan=12;
-            $query = "SELECT `namaKota` FROM `kota`";
+            $query = "SELECT `namaKota` FROM `Kota`";
             $kota = $this->db->executeSelectQuery($query);
             return View::createView('signUp.php',[
                 "tanggal"=>$tanggal,
@@ -33,7 +33,7 @@
             $user=$_POST['iUser'];
             $email=$_POST['inputEmail'];
             $password=$_POST['inputPass'];
-            $query="INSERT INTO `member`(`username`,`namaMember`,`tglLahir`,`kota`,`alamat`,`email`,`kataSandi`,`peran`,`profil`,`tglGabung`) VALUES(";
+            $query="INSERT INTO `Member`(`username`,`namaMember`,`tglLahir`,`kota`,`alamat`,`email`,`kataSandi`,`peran`,`profil`,`tglGabung`) VALUES(";
             if(isset($user)&&$user!=""){
                 $user=$this->db->escapeString($user);
                 $query.="'$user',";
